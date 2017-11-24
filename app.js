@@ -97,7 +97,7 @@ container2 = new Layer({
 
 for (j = 0, len = symptoms.length; j < len; j++) {
   i = symptoms[j];
-  textButton = new TextLayer({
+  textButton = new Layer({
     text: i,
     style: s1
   });

@@ -105,7 +105,7 @@ container2 = new Layer
   backgroundColor: "#1994d7"
 
 for i in symptoms
-  textButton = new TextLayer
+  textButton = new Layer
     text: i
     style: s1
 #BioMetrics Reading Screen
