@@ -22,6 +22,21 @@ header_style =
   "lineHeight" : "50px"
   "color" : "#ffffff"
 
+h3 =
+  "fontFamily" : "Montserrat Light"
+  "fontSize" : "18pt"
+  "textAlign" : "center"
+  "color" : "#fff"
+  "lineHeight" : "24px"
+  "color" : "#fff"
+
+s3 =
+  "fontFamily" : "Montserrat Light"
+  "fontSize" : "10pt"
+  "textAlign" : "center"
+  "lineHeight" : "18px"
+  "color" : "#ffffff"
+
 s1 =
   "fontFamily" : "Nunito Light"
   "fontSize" : "16pt"
@@ -59,8 +74,6 @@ bio_s2 =
   "lineHeight" : "20px"
   "color" : "#ffffff"
 
-#-----Array-----#
-
 #-----Functions-----#
 #Create Button
 create_button = (layerName, WW) ->
@@ -74,12 +87,6 @@ create_button = (layerName, WW) ->
   layerName.style.lineHeight = (18 * 4) + "px"
 
 #-----Layers-----#
-#Background layer
-BG = new BackgroundLayer
-  width: Screen.width
-  height: Screen.height
-  # backgroundColor: "black"
-  image: "images/debasish-bohidar-288818.jpg"
 
 #Screen for MS detection
 container1 = new Layer
@@ -93,7 +100,7 @@ container1 = new Layer
 header_1 = new Layer
   html: "Are You Feeling OK?"
   parent: container1
-  y: 32
+  y: 150
   x: Align.center
   width: container1.width
   height: 50
@@ -114,7 +121,7 @@ bio_markers_container = new Layer
   width: (184 * 3) + 32
   height: 184
   x: Align.center
-  y: 172
+  y: Align.center
   backgroundColor: null
 
 heart_rate = new Layer
@@ -187,7 +194,7 @@ button_container = new Layer
   width: (48 * 8) + 16
   height: (18* 4)
   x: Align.center
-  y: 400
+  y: bio_markers_container.y + bio_markers_container.height + 64
   backgroundColor: null
 
 yes_btn_1 = new Layer
@@ -202,163 +209,6 @@ no_btn_1 = new Layer
 create_button(no_btn_1)
 
 
-
-
-#Symptoms Screen
-container2 = new Layer
-  # image: "images/debasish-bohidar-288818.jpg"
-  x: Align.center()
-  y: Align.center()
-  width: Screen.width
-  height: Screen.height
-  backgroundColor: "black"
-
-header_2 = new Layer
-  html: "Which Symptoms Are You Experiencing?"
-  parent: container2
-  y: 32
-  x: Align.center
-  width: container1.width
-  height: 50
-  backgroundColor: null
-  style: header_style
-
-symptom_btn_1 = new Layer
-  style: s1
-  parent: container2
-  x: 32
-  y: 200
-  html: "Nausea"
-create_button(symptom_btn_1, 48 * 3)
-
-symptom_btn_2 = new Layer
-  style: s1
-  parent: container2
-  html: "Vomiting"
-create_button(symptom_btn_2, 48 * 3)
-
-if (symptom_btn_1.width + symptom_btn_1.x + 16) < (Screen.width - symptom_btn_2.width - 16)
-  symptom_btn_2.x = symptom_btn_1.width + symptom_btn_1.x + 16
-  symptom_btn_2.y = 200
-else
-    symptom_btn_2.x = 32
-    symptom_btn_2.y = symptom_btn_1.y + symptom_btn_1.height + 16
-
-symptom_btn_3 = new Layer
-  style: s1
-  parent: container2
-  html: "Pale skin"
-create_button(symptom_btn_3, 48 * 3)
-
-if (symptom_btn_2.width + symptom_btn_2.x + 16) < (Screen.width - symptom_btn_3.width - 16)
-  symptom_btn_3.x = symptom_btn_2.width + symptom_btn_2.x + 16
-  symptom_btn_3.y = symptom_btn_2.y
-else
-    symptom_btn_3.x = 32
-    symptom_btn_3.y = symptom_btn_2.y + symptom_btn_2.height + 16
-
-symptom_btn_4 = new Layer
-  style: s1
-  parent: container2
-  html: "Cold sweats"
-create_button(symptom_btn_4, 48 * 3)
-
-if (symptom_btn_3.width + symptom_btn_3.x + 16) < (Screen.width - symptom_btn_4.width - 16)
-  symptom_btn_4.x = symptom_btn_3.width + symptom_btn_3.x + 16
-  symptom_btn_4.y = symptom_btn_3.y
-else
-    symptom_btn_4.x = 32
-    symptom_btn_4.y = symptom_btn_3.y + symptom_btn_3.height + 16
-
-symptom_btn_5 = new Layer
-  style: s1
-  parent: container2
-  html: "Cold or Numb Hands"
-create_button(symptom_btn_5, 48 * 5)
-
-if (symptom_btn_4.width + symptom_btn_4.x + 16) < (Screen.width - symptom_btn_5.width - 16)
-  symptom_btn_5.x = symptom_btn_4.width + symptom_btn_4.x + 16
-  symptom_btn_5.y = symptom_btn_4.y
-else
-    symptom_btn_5.x = 32
-    symptom_btn_5.y = symptom_btn_4.y + symptom_btn_4.height + 16
-
-symptom_btn_6 = new Layer
-  style: s1
-  parent: container2
-  html: "Dizziness"
-create_button(symptom_btn_6, 48 * 3)
-
-if (symptom_btn_5.width + symptom_btn_5.x + 16) < (Screen.width - symptom_btn_6.width - 16)
-  symptom_btn_6.x = symptom_btn_5.width + symptom_btn_5.x + 16
-  symptom_btn_6.y = symptom_btn_5.y
-else
-    symptom_btn_6.x = 32
-    symptom_btn_6.y = symptom_btn_5.y + symptom_btn_5.height + 16
-
-symptom_btn_7 = new Layer
-  style: s1
-  parent: container2
-  html: "Headache"
-create_button(symptom_btn_7, 48 * 3)
-
-if (symptom_btn_6.width + symptom_btn_6.x + 16) < (Screen.width - symptom_btn_6.width - 16)
-  symptom_btn_7.x = symptom_btn_6.width + symptom_btn_6.x + 16
-  symptom_btn_7.y = symptom_btn_6.y
-else
-    symptom_btn_7.x = 32
-    symptom_btn_7.y = symptom_btn_6.y + symptom_btn_6.height + 16
-
-symptom_btn_8 = new Layer
-  style: s1
-  parent: container2
-  html: "Increased salivation"
-create_button(symptom_btn_8, 48 * 5)
-
-if (symptom_btn_7.width + symptom_btn_7.x + 16) < (Screen.width - symptom_btn_8.width - 16)
-  symptom_btn_8.x = symptom_btn_7.width + symptom_btn_7.x + 16
-  symptom_btn_8.y = symptom_btn_7.y
-else
-    symptom_btn_8.x = 32
-    symptom_btn_8.y = symptom_btn_7.y + symptom_btn_7.height + 16
-
-symptom_btn_9 = new Layer
-  style: s1
-  parent: container2
-  html: "Dehydration"
-create_button(symptom_btn_9, 48 * 3)
-
-if (symptom_btn_8.width + symptom_btn_8.x + 16) < (Screen.width - symptom_btn_9.width - 16)
-  symptom_btn_9.x = symptom_btn_8.width + symptom_btn_8.x + 16
-  symptom_btn_9.y = symptom_btn_8.y
-else
-    symptom_btn_9.x = 32
-    symptom_btn_9.y = symptom_btn_8.y + symptom_btn_8.height + 16
-
-symptom_btn_10 = new Layer
-  style: s1
-  parent: container2
-  html: "Fatigue"
-create_button(symptom_btn_10, 48 * 3)
-
-if (symptom_btn_9.width + symptom_btn_9.x + 16) < (Screen.width - symptom_btn_10.width - 16)
-  symptom_btn_10.x = symptom_btn_9.width + symptom_btn_9.x + 16
-  symptom_btn_10.y = symptom_btn_9.y
-else
-    symptom_btn_10.x = 32
-    symptom_btn_10.y = symptom_btn_9.y + symptom_btn_9.height + 16
-
-symptoms_array = [symptom_btn_1, symptom_btn_2, symptom_btn_3, symptom_btn_4, symptom_btn_5, symptom_btn_6, symptom_btn_7, symptom_btn_8, symptom_btn_9, symptom_btn_10]
-
-
-continue_btn = new Layer
-  style: s1
-  parent: container2
-  html: "Continue"
-  x: Align.center()
-  y: symptom_btn_10.y +  symptom_btn_10.height + 48
-create_button(continue_btn)
-
 #Steps we will run them through
 container25 = new Layer
   width: Screen.width
@@ -369,8 +219,229 @@ container25 = new Layer
   height: Screen.height
   backgroundColor: "black"
 
+instructions = new Layer
+  parent: container25
+  width: 964
+  height: 300
+  x: Align.center
+  y: Align.center
+  backgroundColor: null
+
+rescue = new Layer
+  parent: instructions
+  width: 300
+  height: 300
+  backgroundColor: null
+
+palm_down = new Layer
+  width: 200
+  height: (2 / 7) * 272
+  x: 50
+  image: "images/palm_down.png"
+  parent: rescue
+
+p6_side = new Layer
+  width: 110
+  height: (110 / 952) * 618
+  x: 40
+  y: palm_down.height + 16
+  image: "images/side_view_p6.png"
+  parent: rescue
+
+rescue_text = new Layer
+  parent: rescue
+  width: 300
+  height: 112
+  y: Align.bottom
+  style: h3
+  backgroundColor: null
+  html: "Rescue from Nausea"
+
+rescue_text_2 = new Layer
+  parent: rescue
+  width: 300
+  height: 76
+  y: Align.bottom
+  style: s3
+  backgroundColor: null
+  html: "Putting pressure on the P6 accupressure point (median line of the underside of the wrist) is shown to reduce the feeling of nausea in up to 60% of patients."
+
+up_down = new Animation palm_down,
+  y: 15
+  time: 0.4
+  curve: "ease-in-out"
+
+down_up = new Animation palm_down,
+  y: 0
+  time: 0.6
+  curve: "ease-in-out"
+
+up_down.start()
+up_down.onAnimationEnd ->
+  down_up.start()
+down_up.onAnimationEnd ->
+  up_down.start()
+
+relief = new Layer
+  parent: instructions
+  width: 300
+  height: 300
+  x: 332
+  backgroundColor: null
+
+horizon_line_2 = new Layer
+  parent: relief
+  width: 250
+  height: 1
+  x: 15
+  y: 50
+  backgroundColor: "null"
+  borderWidth: 1
+  borderColor: "white"
+  borderStyle: "dashed"
+
+horizon_line = new Layer
+  parent: relief
+  width: 250
+  height: 1
+  x: 15
+  y: 50
+  backgroundColor: "null"
+  borderWidth: 1
+  borderColor: "white"
+
+pitch = new Animation horizon_line,
+  time: 0.6
+  rotationZ: 12
+  scale: 1
+
+unpitch = new Animation horizon_line,
+  time: 0.6
+  rotationZ: 0
+  scale: 0.9
+
+pitch.start()
+pitch.onAnimationEnd ->
+  unpitch.start()
+unpitch.onAnimationEnd ->
+  pitch.start()
+relief_text = new Layer
+  parent: relief
+  width: 300
+  height: 112
+  y: Align.bottom
+  style: h3
+  backgroundColor: null
+  html: "Relief of Symptoms"
+
+relief_text_2 = new Layer
+  parent: relief
+  width: 300
+  height: 76
+  y: Align.bottom
+  style: s3
+  backgroundColor: null
+  html: "Having visual input that confirms the motion you are feeling will help prevent motion sickness from onsetting again."
 
 
+relax = new Layer
+  parent: instructions
+  width: 300
+  height: 300
+  x: 664
+  backgroundColor: null
+
+movie_gradient = new Gradient
+    start: "#000"
+    end: "#fff"
+    angle: 45
+
+movie_gradient_2 = new Gradient
+    start: "#000"
+    end: "#fff"
+    angle: 135
+
+movie_gradient_3 = new Gradient
+    start: "#000"
+    end: "#fff"
+    angle: 225
+
+movie_gradient_4 = new Gradient
+    start: "#000"
+    end: "#fff"
+    angle: 315
+
+movie_line = new Layer
+  parent: relax
+  width: 200
+  height: 1
+  x: Align.center
+  y: 65
+  backgroundColor: "null"
+  borderColor: "white"
+  borderWidth: 1
+
+movie_screen = new Layer
+  parent: relax
+  x: Align.center()
+  width: 80
+  height: 45
+  y: 40
+  backgroundColor: "black"
+  borderColor: "white"
+  borderWidth: 1
+
+msA1 = new Animation movie_screen,
+  gradient: movie_gradient
+  time: 1
+
+msA2 = new Animation movie_screen,
+  gradient: movie_gradient_2
+  time: 1
+
+msA3 = new Animation movie_screen,
+  gradient: movie_gradient_3
+  time: 1
+
+msA4 = new Animation movie_screen,
+  gradient: movie_gradient_4
+  time: 1
+
+msA1.start()
+msA1.onAnimationEnd ->
+  msA2.start()
+msA2.onAnimationEnd ->
+  msA3.start()
+msA3.onAnimationEnd ->
+  msA4.start()
+msA4.onAnimationEnd ->
+  msA1.start()
+
+
+relax_text = new Layer
+  parent: relax
+  width: 300
+  height: 112
+  y: Align.bottom
+  style: h3
+  backgroundColor: null
+  html: "Relax in Flight"
+
+relax_text_2 = new Layer
+  parent: relax
+  width: 300
+  height: 76
+  y: Align.bottom
+  style: s3
+  backgroundColor: null
+  html: "Continue reading or watching your movie on the immersive contoured screens while the horizon passes by in the background."
+
+got_it_btn = new Layer
+  parent: container25
+  x: Align.center
+  y: instructions.y + instructions.height + 64
+  html: "Got It"
+create_button(got_it_btn)
 
 
 
@@ -421,18 +492,17 @@ hand_shrink = new Animation hand,
 #-----Actions-----#
 #flow
 myFlow = new FlowComponent
-myFlow.showNext(container25)
+myFlow.showNext(container1)
 
 #Flow Action
 yes_btn_1.onTap ->
-  myFlow.showNext(container2)
-
-no_btn_1.onTap ->
-  myFlow.showNext(BG)
-
-continue_btn.onTap ->
   myFlow.showNext(container25)
 
+# continue_btn.onTap ->
+#   myFlow.showNext(container25)
+
+got_it_btn.onTap ->
+  myFlow.showNext(container3)
 #animate biometrics
 stepper = 3
 HR1 = ()->
@@ -471,25 +541,6 @@ Utils.delay 30, ->
     Utils.delay stepper3, ->
       HR3()
     stepper3 = stepper3 + 60
-
-#state change
-for i in symptoms_array
-  i.states.stateA =
-    backgroundColor: "teal"
-    style:
-      color: "#fff"
-    animationOptions:
-      curve: "ease-in-out"
-      time: 0.3
-  i.states.stateB =
-    backgroundColor: "white"
-    style:
-      color: "black"
-    animationOptions:
-      curve: "ease-in-out"
-      time: 0.3
-  i.onClick ->
-    this.stateCycle("stateA", "stateB")
 
 #Animate hand and contaienr 3 gradient
 blue = new Gradient
@@ -535,399 +586,3 @@ hand.onLongPressEnd ->
   purpleAnimation.stop()
   greenAnimation.stop()
   blackAnimation.start()
-
-  # sub_container3.visible = true
-  # for i in [0...42]
-  #   dot = new Layer
-  #     parent: sub_container3
-  #     size: Utils.randomNumber(1,10)
-  #     borderRadius: "100%"
-  #     backgroundColor: "#FFB502"
-  #     x: Utils.randomNumber(1,sub_container3.width)
-  #     y: Utils.randomNumber(1,sub_container3.height)
-  #
-  #   dot.animate
-  #     properties:
-  #       x: Utils.randomNumber(1,sub_container3.width)
-  #       y: Utils.randomNumber(1,sub_container3.height)
-  #     time:  Utils.randomNumber(0.6,5)
-  #     repeat: 100
-  #
-  #   sub_container3.onTap (event) ->
-  #     sub_container3.animate
-  #       properties:
-  #         scale: 0.6
-  #       time: 0.6
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# #-----Global Variables-----#
-# counter = 0
-#
-# cover = new BackgroundLayer
-#   image: "images/ng-978.jpg"
-#   width: Screen.width
-#   height: (Screen.width / 4896) * 3264
-#
-# sickIcon = new Layer
-#   image: "images/sickIcon.png"
-#   parent: cover
-#   width: 112
-#   height: 112
-#   x: 64
-#   y: 64
-#
-# #-----Array-----#
-# color_array = [{"left" : "#00c6ff"; "right" : "#0072ff"}, {"left" : "#ffe47a"; "right" : "#f7ff00"}, {"left" : "#64f38c" ; "right" : "#45b649"}, {"left" : "#ff00cc" ; "right" : "#333399"} ]
-#
-#
-# #-----Functions-----#
-# side_pulse_func = (dragLayer, timeT, start) ->
-#   side_pulse = new Animation
-#     layer: dragLayer
-#     properties:
-#       scale: 1.6
-#       opacity: 0
-#     time: timeT
-#     curve: "linear"
-#
-#   side_unpulse = new Animation
-#     layer: dragLayer
-#     properties:
-#       scale: 0
-#     time: 0.1
-#     curve: "linear"
-#
-#   side_pulse.start()
-#
-#   side_pulse.onAnimationEnd ->
-#     Utils.delay 0.3, ->
-#       dragLayer.scale = 0
-#       dragLayer.opacity = 0.6
-#       side_pulse.start()
-#
-#   if start is false
-#     side_pulse.stop()
-#
-# side_to_side = (finger, bg, dragLayer)->
-#   finger.on Events.Drag, (event) ->
-#
-#     if event.offsetTime >= 1000 & event.offsetTime < 2000
-#       bg.animate
-#         gradient:
-#           start: color_array[1].left
-#           stop: color_array[1].right
-#         time: 0.1
-#     else if event.offsetTime >= 2000 & event.offsetTime < 3000
-#       bg.animate
-#         gradient:
-#           start: color_array[2].left
-#           stop: color_array[2].right
-#         time: 0.1
-#     else if event.offsetTime >= 3000 & event.offsetTime < 4000
-#       bg.animate
-#         gradient:
-#           start: color_array[0].left
-#           stop: color_array[0].right
-#         time: 0.1
-#     else if event.offsetTime >= 4000 & event.offsetTime < 5000
-#       bg.animate
-#         gradient:
-#           start: color_array[1].left
-#           stop: color_array[1].right
-#         time: 0.1
-#     else if event.offsetTime >= 5000 & event.offsetTime < 6000
-#       bg.animate
-#         gradient:
-#           start: color_array[2].left
-#           stop: color_array[2].right
-#         time: 0.1
-#     else if event.offsetTime >= 7000
-#       bg.animate
-#         gradient:
-#           start: color_array[3].left
-#           stop: color_array[3].right
-#         time: 0.1
-#
-#   finger.on "change:point", ->
-#       DX = dragLayer.x
-#       DY = dragLayer.y
-#       bg.rotationZ = @point.x / 4
-#       if @point.x >=DX & @point.x <= (DX + 60) & @point.y >= DY & @point.y <= (DY + (Screen.width / 5))
-#         counter = counter + 1
-#         Utils.delay 0.6, ->
-#           if DX is -30
-#             dragLayer.x = Screen.width - 30
-#           else
-#             dragLayer.x = -30
-#           if DY >= (0.8 * Screen.height)
-#             dragLayer.y = 0
-#           else
-#             dragLayer.y = DY + (Screen.height / 5)
-#   finger.onDragEnd ->
-#     dragLayer.x = -30
-#     dragLayer.y = 0
-#
-# #create finger tip
-# finger_tip = (finger, sub_finger)->
-#   finger.draggable.enabled = true
-#   finger.width = 50
-#   finger.height = 65
-#   finger.borderRadius = 65
-#   finger.backgroundColor = "white"
-#   sub_finger.parent = finger
-#   sub_finger.backgroundColor = "white"
-#   sub_finger.borderRadius = 65
-#   sub_finger.width = finger.width
-#   sub_finger.height = finger.height
-#
-# # chaser_pulse = (chaser) ->
-# #   sub_chaser = new Layer
-# #     parent: chaser
-# #     backgroundColor: "yellow"
-# #     borderRadius: 65
-# #     width: chaser.width
-# #     height: chaser.height
-# #
-# #   pulseStart = new Animation
-# #     layer: sub_chaser
-# #     properties:
-# #       scale: 1.6
-# #       opacity: 0
-# #     curve: "linear"
-# #     time: 1.5
-# #
-# #
-# #   pulseStart.start()
-# #   pulseStart.onAnimationEnd ->
-# #     sub_chaser.scale = 1
-# #     sub_chaser.opacity = 1
-# #     pulseStart.start()
-#
-# finger_pulse = (finger, sub_finger) ->
-#   XX = finger.x
-#   YY = finger.y
-#   pulseStart = new Animation
-#     layer: sub_finger
-#     properties:
-#       scale: 1.6
-#       opacity: 0
-#     curve: "linear"
-#     time: 0.9
-#
-#   finger.onTouchStart ->
-#     pulseStart.start()
-#     pulseStart.onAnimationEnd ->
-#       sub_finger.scale = 1
-#       sub_finger.opacity = 1
-#       pulseStart.start()
-#
-#     # if @point.x > (chaser.x - 10) & @point.x < (chaser.x + 10) & @point.y > (chaser.y - 10) & @point.y < (chaser.y + 10)
-#     #   print "success"
-#     #   finger.animate
-#     #     properties:
-#     #       scale: 1.2
-#     #     time: 0.3
-#     #     curve: Bezier(0.25, 0.1, 0.25, 1)
-#     #   chaser.animate
-#     #     properties:
-#     #       scale: 0
-#     #     time: 0.3
-#     #     curve: Bezier(0.25, 0.1, 0.25, 1)
-#
-#   finger.onDragEnd ->
-#     circle.animate
-#       gradient:
-#           start: "#00c6ff"
-#           end: "#0072ff"
-#           angle: 90
-#     pulseStart.stop()
-#     sub_finger.scale = 1
-#     sub_finger.opacity = 1
-#     finger.animate
-#       properties:
-#         x: XX
-#         y: YY
-#       time: 0.3
-#       curve: Bezier(0.25, 0.1, 0.25, 1)
-#
-# #-----Layers-----#
-# circle = new Layer
-#   visible: false
-#   x: -0.5 * Screen.height
-#   y: -0.5 * Screen.height
-#   width: 3 * Screen.height
-#   height: 3 * Screen.height
-#   # opacity: 0
-# circle.gradient =
-#     start: "#00c6ff"
-#     end: "#0072ff"
-#     angle: 90
-#
-#
-# # chaser_finger = new Layer
-# #   width: 50
-# #   height: 65
-# #   backgroundColor: "yellow"
-# #   borderRadius: 65
-# #   x: Utils.randomNumber(100, 800)
-# #   y: Utils.randomNumber(50, 400)
-#
-#
-# middle_finger = new Layer
-#   x: Screen.width / 2
-#   y: 50
-#   # scale: 0
-#   visible: false
-#
-# middle_finger_bg = new Layer
-#
-# # pointer_finger = new Layer
-# #   x: middle_finger.x - 100
-# #   y: 100
-# #
-# # pointer_finger_bg = new Layer
-#
-# drag_here = new Layer
-#   width: 60
-#   x: -30
-#   height: Screen.height / 5
-#   borderRadius: Screen.height / 5
-#   backgroundColor: "white"
-#   opacity: 0.6
-#   visible: false
-#
-# # slider = new SliderComponent
-# #    width: 300
-# #    height: 65
-# #    x: Align.center
-# #    y: 100
-# #    backgroundColor: "#a6a6a6"
-# # slider.fill.backgroundColor = "#ff0080"
-# # slider.knob.size = 65
-# # slider.knob.borderRadius = 65
-# #-----Actions-----#
-#
-# sickIcon.onTap ->
-#
-#   #BackgroundLayer
-#
-#   #icon Animation
-#
-#   #circle animation
-#   circle.opacity = 0
-#   circle.visible = true
-#   borderRadius: 100%
-#   circle.animate
-#     properties:
-#       borderRadius: 0
-#       opacity: 1
-#     time: 0.3
-#     curve: "linear"
-#
-#   #middle finger animation
-#   Utils.delay 0.6, ->
-#     middle_finger.opacity = 0
-#     middle_finger.scale = 0
-#     middle_finger.visible = true
-#     middle_finger.animate
-#       properties:
-#         scale: 1
-#         opacity: 0.6
-#     Utils.delay 0.3, ->
-#       side_pulse_func(middle_finger, 1.8)
-#
-# #On tap, set middle finger to 0
-# middle_finger.onTap ->
-#   if counter is 0
-#     counter = 1
-#     side_pulse_func(middle_finger, 1.8, false)
-#     middle_finger.animate
-#       properties:
-#         opacity: 1
-#         scale: 1
-#       time: 0.3
-#       curve: "linear"
-#     #drag here animation
-#     drag_here.visible = true
-#     side_pulse_func(drag_here, 1.2)
-#
-#
-# #Detech number of fingers on screen
-# middle_finger.on Events.Drag, (event) ->
-#     fingers_on_screen = event.fingers
-#
-#
-#
-# #Create fingers
-# finger_tip(middle_finger, middle_finger_bg)
-# # finger_tip(pointer_finger, pointer_finger_bg)
-#
-# #Pulse fingers
-# finger_pulse(middle_finger, middle_finger_bg)
-# # finger_pulse(pointer_finger, pointer_finger_bg)
-#
-# #back and forth
-# # slider.onValueChange ->
-# #
-# #   if slider.value > 0.9
-# #     slider.animateToValue(0, { curve: Spring })
-# #     if circle.opacity < 1
-# #       circle.opacity = circle.opacity + 0.1
-# #     else if circle.opacity = 1
-# #       slider.visible = false
-# #       middle_finger.visible = true
-# #       slider.animate
-# #         properties:
-# #           scale: 0
-# #         time: 0.3
-# #         curve: "linear"
-# #       middle_finger.animate
-# #         properties:
-# #           scale: 1
-# #         time: 0.3
-# #         curve: "linear"
-#
-# #drag here animation
-# #side_pulse_func(drag_here, 1.2)
-#
-# #side to side game
-# side_to_side(middle_finger, circle, drag_here)
