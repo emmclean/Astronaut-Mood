@@ -9,8 +9,8 @@ blood_press_denom = 80
 temp_num = 97.9
 
 #Set Device Type
-if innerWidth == 2048 || innerWidth == 1536
-  Framer.Device.deviceType = "fullscreen"
+# if innerWidth == 2048 || innerWidth == 1536
+#   Framer.Device.deviceType = "fullscreen"
 
 symptoms = ["Nausea", "Vomiting", "Pale skin", "Cold sweats", "Cold or Numb Hands", "Dizziness", "Headache", "Increased salivation", "Fatigue"]
 
