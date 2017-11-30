@@ -1,4 +1,4 @@
-var HR1, HR2, HR3, bio_markers_container, bio_s1, bio_s2, blackAnimation, blood_press, blood_press_denom, blood_press_num, blue, blueAnimation, button_container, container1, container2, container3, create_button, create_content, create_header, creater_container, down_up, got_it_btn, green, greenAnimation, h3, hand, hand_grow, hand_shrink, header_1, header_style, heart_at_start, heart_rate, heart_rate_num, horizon_line, horizon_line_2, instructions, movie_gradient, movie_gradient_2, movie_gradient_3, movie_gradient_4, movie_line, movie_screen, msA1, msA2, msA3, msA4, myFlow, no_btn_1, p6_side, palm_down, pitch, press_at_start, purple, purpleAnimation, relax, relax_text, relax_text_2, relief, relief_text, relief_text_2, rescue, rescue_text, rescue_text_2, s1, s1W, s2, s3, skin_temp, stepper, stepper2, stepper3, sub_container3, subheader_1, symptoms, temp_at_start, temp_num, unpitch, up_down, yes_btn_1;
+var HR1, HR2, HR3, bio_markers_container, bio_s1, bio_s2, blackAnimation, blood_press, blood_press_denom, blood_press_num, blue, blueAnimation, button_container, container1, container2, container3, create_button, create_content, create_header, creater_container, down_up, got_it_btn, green, greenAnimation, h3, hand, hand_grow, hand_shrink, header_1, header_style, heart_at_start, heart_rate, heart_rate_num, horizon_line, horizon_line_2, instructions, movie_gradient, movie_gradient_2, movie_gradient_3, movie_gradient_4, movie_line, movie_screen, msA1, msA2, msA3, msA4, myFlow, no_btn_1, p6_side, palm_down, pitch, press_at_start, purple, purpleAnimation, relax, relax_text, relax_text_2, relief, relief_text, relief_text_2, rescue, rescue_text, rescue_text_2, s1, s2, s3, skin_temp, stepper, stepper2, stepper3, sub_container3, subheader_1, symptoms, temp_at_start, temp_num, unpitch, up_down, yes_btn_1;
 
 heart_rate_num = 147;
 
@@ -42,16 +42,8 @@ s1 = {
   "color": "#253b56"
 };
 
-s1W = {
-  "fontFamily": "Nunito Light",
-  "fontSize": "16pt",
-  "textAlign": "center",
-  "color": "#fff",
-  "color": "#253b56"
-};
-
 s2 = {
-  "fontFamily": "Montserrat Light",
+  "fontFamily": "Montserrat",
   "fontSize": "40pt",
   "textAlign": "center",
   "lineHeight": "48px",
@@ -60,18 +52,18 @@ s2 = {
 
 bio_s1 = {
   "fontFamily": "Montserrat",
-  "fontSize": "24pt",
+  "fontSize": "40pt",
   "textAlign": "center",
-  "lineHeight": "32px",
+  "lineHeight": "48px",
   "padding-top": (Screen.width / 16) + "px",
   "color": "#ffffff"
 };
 
 bio_s2 = {
   "fontFamily": "Montserrat",
-  "fontSize": "14pt",
+  "fontSize": "20pt",
   "textAlign": "center",
-  "lineHeight": "20px",
+  "lineHeight": "28px",
   "color": "#ffffff"
 };
 

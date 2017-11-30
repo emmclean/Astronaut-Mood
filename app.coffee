@@ -44,16 +44,8 @@ s1 =
   # "lineHeight" : Screen.width / 4 + "px"
   "color" : "#253b56"
 
-s1W =
-  "fontFamily" : "Nunito Light"
-  "fontSize" : "16pt"
-  "textAlign" : "center"
-  "color" : "#fff"
-  # "lineHeight" : Screen.width / 4 + "px"
-  "color" : "#253b56"
-
 s2 =
-  "fontFamily" : "Montserrat Light"
+  "fontFamily" : "Montserrat"
   "fontSize" : "40pt"
   "textAlign" : "center"
   "lineHeight" : "48px"
@@ -61,17 +53,17 @@ s2 =
 
 bio_s1 =
   "fontFamily" : "Montserrat"
-  "fontSize" : "24pt"
+  "fontSize" : "40pt"
   "textAlign" : "center"
-  "lineHeight" : "32px"
+  "lineHeight" : "48px"
   "padding-top" : (Screen.width / 16) + "px"
   "color" : "#ffffff"
 
 bio_s2 =
   "fontFamily" : "Montserrat"
-  "fontSize" : "14pt"
+  "fontSize" : "20pt"
   "textAlign" : "center"
-  "lineHeight" : "20px"
+  "lineHeight" : "28px"
   "color" : "#ffffff"
 
 #-----Functions-----#
