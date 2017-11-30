@@ -1,4 +1,4 @@
-var HR1, HR2, HR3, bio_markers_container, bio_s1, bio_s2, blackAnimation, blood_press, blood_press_denom, blood_press_num, blue, blueAnimation, button_container, container1, container25, container3, create_button, create_header, down_up, got_it_btn, green, greenAnimation, h3, hand, hand_grow, hand_shrink, header_1, header_style, heart_at_start, heart_rate, heart_rate_num, horizon_line, horizon_line_2, instructions, movie_gradient, movie_gradient_2, movie_gradient_3, movie_gradient_4, movie_line, movie_screen, msA1, msA2, msA3, msA4, myFlow, no_btn_1, p6_side, palm_down, pitch, press_at_start, purple, purpleAnimation, relax, relax_text, relax_text_2, relief, relief_text, relief_text_2, rescue, rescue_text, rescue_text_2, s1, s1W, s2, s3, skin_temp, stepper, stepper2, stepper3, sub_container3, subheader_1, symptoms, temp_at_start, temp_num, unpitch, up_down, yes_btn_1;
+var HR1, HR2, HR3, bio_markers_container, bio_s1, bio_s2, blackAnimation, blood_press, blood_press_denom, blood_press_num, blue, blueAnimation, button_container, container1, container25, container3, create_button, create_content, create_header, down_up, got_it_btn, green, greenAnimation, h3, hand, hand_grow, hand_shrink, header_1, header_style, heart_at_start, heart_rate, heart_rate_num, horizon_line, horizon_line_2, instructions, movie_gradient, movie_gradient_2, movie_gradient_3, movie_gradient_4, movie_line, movie_screen, msA1, msA2, msA3, msA4, myFlow, no_btn_1, p6_side, palm_down, pitch, press_at_start, purple, purpleAnimation, relax, relax_text, relax_text_2, relief, relief_text, relief_text_2, rescue, rescue_text, rescue_text_2, s1, s1W, s2, s3, skin_temp, stepper, stepper2, stepper3, sub_container3, subheader_1, symptoms, temp_at_start, temp_num, unpitch, up_down, yes_btn_1;
 
 heart_rate_num = 147;
 
@@ -94,6 +94,14 @@ create_header = function(layerName) {
   return layerName.style = header_style;
 };
 
+create_content = function(layerName) {
+  layerName.width = 0.8 * Screen.width;
+  layerName.height = Screen.height / 3;
+  layerName.x = Align.center;
+  layerName.y = Align.center;
+  return layerName.backgroundColor = null;
+};
+
 container1 = new Layer({
   x: Align.center,
   y: Align.center,
@@ -114,19 +122,16 @@ subheader_1 = new Layer({
   parent: header_1,
   width: header_1.width,
   height: 50,
-  y: header_1.height / 2,
+  y: (header_1.height / 2) + 16,
   backgroundColor: null,
   style: s2
 });
 
 bio_markers_container = new Layer({
-  parent: container1,
-  width: 0.8 * Screen.width,
-  height: Screen.height / 3,
-  x: Align.center,
-  y: Align.center,
-  backgroundColor: null
+  parent: container1
 });
+
+create_content(bio_markers_container);
 
 heart_rate = new Layer({
   parent: bio_markers_container,

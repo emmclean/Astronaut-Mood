@@ -93,6 +93,13 @@ create_header = (layerName) ->
   layerName.backgroundColor = null
   layerName.style = header_style
 
+#create content box
+create_content = (layerName) ->
+    layerName.width = 0.8 * Screen.width#(184 * 3) + 32
+    layerName.height = Screen.height / 3#184
+    layerName.x = Align.center
+    layerName.y = Align.center
+    layerName.backgroundColor = null
 #-----Layers-----#
 
 
@@ -116,17 +123,13 @@ subheader_1 = new Layer
   parent: header_1
   width: header_1.width
   height: 50
-  y: header_1.height / 2
+  y: (header_1.height / 2) + 16
   backgroundColor: null
   style: s2
 
 bio_markers_container = new Layer
   parent: container1
-  width: 0.8 * Screen.width#(184 * 3) + 32
-  height: Screen.height / 3#184
-  x: Align.center
-  y: Align.center
-  backgroundColor: null
+create_content(bio_markers_container)
 
 heart_rate = new Layer
   parent: bio_markers_container
