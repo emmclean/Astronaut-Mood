@@ -11,7 +11,7 @@ temp_num = 97.9;
 symptoms = ["Nausea", "Vomiting", "Pale skin", "Cold sweats", "Cold or Numb Hands", "Dizziness", "Headache", "Increased salivation", "Fatigue"];
 
 header_style = {
-  "fontFamily": "Montserrat Light",
+  "fontFamily": "Calibri",
   "fontSize": "32pt",
   "textAlign": "center",
   "lineHeight": (Screen.width / 3) + "px",
@@ -19,7 +19,7 @@ header_style = {
 };
 
 h3 = {
-  "fontFamily": "Montserrat Light",
+  "fontFamily": "Calibri",
   "fontSize": "18pt",
   "textAlign": "center",
   "color": "#fff",
@@ -28,7 +28,7 @@ h3 = {
 };
 
 s3 = {
-  "fontFamily": "Montserrat Light",
+  "fontFamily": "Calibri",
   "fontSize": "10pt",
   "textAlign": "center",
   "lineHeight": "18px",
@@ -36,7 +36,7 @@ s3 = {
 };
 
 s1 = {
-  "fontFamily": "Nunito Light",
+  "fontFamily": "Calibri Light",
   "fontSize": "16pt",
   "textAlign": "center",
   "color": "#253b56"
@@ -51,7 +51,7 @@ s1W = {
 };
 
 s2 = {
-  "fontFamily": "Montserrat Light",
+  "fontFamily": "Calibri Light",
   "fontSize": "18pt",
   "textAlign": "center",
   "lineHeight": "26px",
@@ -59,7 +59,7 @@ s2 = {
 };
 
 bio_s1 = {
-  "fontFamily": "Montserrat Light",
+  "fontFamily": "Calibri",
   "fontSize": "16pt",
   "textAlign": "center",
   "lineHeight": "32px",
@@ -68,7 +68,7 @@ bio_s1 = {
 };
 
 bio_s2 = {
-  "fontFamily": "Montserrat Light",
+  "fontFamily": "Calibri",
   "fontSize": "8pt",
   "textAlign": "center",
   "lineHeight": "20px",

@@ -16,14 +16,14 @@ symptoms = ["Nausea", "Vomiting", "Pale skin", "Cold sweats", "Cold or Numb Hand
 
 #-----Styles-----#
 header_style =
-  "fontFamily" : "Montserrat Light"
+  "fontFamily" : "Calibri"
   "fontSize" : "32pt"
   "textAlign" : "center"
   "lineHeight" : (Screen.width / 3) + "px"
   "color" : "#ffffff"
 
 h3 =
-  "fontFamily" : "Montserrat Light"
+  "fontFamily" : "Calibri"
   "fontSize" : "18pt"
   "textAlign" : "center"
   "color" : "#fff"
@@ -31,14 +31,14 @@ h3 =
   "color" : "#fff"
 
 s3 =
-  "fontFamily" : "Montserrat Light"
+  "fontFamily" : "Calibri"
   "fontSize" : "10pt"
   "textAlign" : "center"
   "lineHeight" : "18px"
   "color" : "#ffffff"
 
 s1 =
-  "fontFamily" : "Nunito Light"
+  "fontFamily" : "Calibri Light"
   "fontSize" : "16pt"
   "textAlign" : "center"
   # "lineHeight" : Screen.width / 4 + "px"
@@ -53,14 +53,14 @@ s1W =
   "color" : "#253b56"
 
 s2 =
-  "fontFamily" : "Montserrat Light"
+  "fontFamily" : "Calibri Light"
   "fontSize" : "18pt"
   "textAlign" : "center"
   "lineHeight" : "26px"
   "color" : "#ffffff"
 
 bio_s1 =
-  "fontFamily" : "Montserrat Light"
+  "fontFamily" : "Calibri"
   "fontSize" : "16pt"
   "textAlign" : "center"
   "lineHeight" : "32px"
@@ -68,7 +68,7 @@ bio_s1 =
   "color" : "#ffffff"
 
 bio_s2 =
-  "fontFamily" : "Montserrat Light"
+  "fontFamily" : "Calibri"
   "fontSize" : "8pt"
   "textAlign" : "center"
   "lineHeight" : "20px"
@@ -86,14 +86,14 @@ create_button = (layerName, WW) ->
   layerName.style = s1
   layerName.style.lineHeight = (18 * 4) + "px"
 
-#-----Layers-----#
-
 #Create header container
 create_header = (layerName) ->
   layerName.width = Screen.width
   layerName.height = Screen.height / 3
   layerName.backgroundColor = null
   layerName.style = header_style
+
+#-----Layers-----#
 
 
 #Screen for MS detection
