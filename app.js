@@ -1,4 +1,4 @@
-var HR1, HR2, HR3, bio_markers_container, bio_s1, bio_s2, blackAnimation, blood_press, blood_press_denom, blood_press_num, blue, blueAnimation, button_container, container1, container25, container3, create_button, create_content, create_header, down_up, got_it_btn, green, greenAnimation, h3, hand, hand_grow, hand_shrink, header_1, header_style, heart_at_start, heart_rate, heart_rate_num, horizon_line, horizon_line_2, instructions, movie_gradient, movie_gradient_2, movie_gradient_3, movie_gradient_4, movie_line, movie_screen, msA1, msA2, msA3, msA4, myFlow, no_btn_1, p6_side, palm_down, pitch, press_at_start, purple, purpleAnimation, relax, relax_text, relax_text_2, relief, relief_text, relief_text_2, rescue, rescue_text, rescue_text_2, s1, s1W, s2, s3, skin_temp, stepper, stepper2, stepper3, sub_container3, subheader_1, symptoms, temp_at_start, temp_num, unpitch, up_down, yes_btn_1;
+var HR1, HR2, HR3, bio_markers_container, bio_s1, bio_s2, blackAnimation, blood_press, blood_press_denom, blood_press_num, blue, blueAnimation, button_container, container1, container2, container3, create_button, create_content, create_header, creater_container, down_up, got_it_btn, green, greenAnimation, h3, hand, hand_grow, hand_shrink, header_1, header_style, heart_at_start, heart_rate, heart_rate_num, horizon_line, horizon_line_2, instructions, movie_gradient, movie_gradient_2, movie_gradient_3, movie_gradient_4, movie_line, movie_screen, msA1, msA2, msA3, msA4, myFlow, no_btn_1, p6_side, palm_down, pitch, press_at_start, purple, purpleAnimation, relax, relax_text, relax_text_2, relief, relief_text, relief_text_2, rescue, rescue_text, rescue_text_2, s1, s1W, s2, s3, skin_temp, stepper, stepper2, stepper3, sub_container3, subheader_1, symptoms, temp_at_start, temp_num, unpitch, up_down, yes_btn_1;
 
 heart_rate_num = 147;
 
@@ -60,7 +60,7 @@ s2 = {
 
 bio_s1 = {
   "fontFamily": "Calibri",
-  "fontSize": "16pt",
+  "fontSize": "24pt",
   "textAlign": "center",
   "lineHeight": "32px",
   "padding-top": "64px",
@@ -69,7 +69,7 @@ bio_s1 = {
 
 bio_s2 = {
   "fontFamily": "Calibri",
-  "fontSize": "8pt",
+  "fontSize": "14pt",
   "textAlign": "center",
   "lineHeight": "20px",
   "color": "#ffffff"
@@ -87,6 +87,14 @@ create_button = function(layerName, WW) {
   return layerName.style.lineHeight = (18 * 4) + "px";
 };
 
+creater_container = function(layerName) {
+  layerName.x = Align.center;
+  layerName.y = Align.center;
+  layerName.width = Screen.width;
+  layerName.height = Screen.height;
+  return layerName.backgroundColor = "black";
+};
+
 create_header = function(layerName) {
   layerName.width = Screen.width;
   layerName.height = Screen.height / 3;
@@ -102,13 +110,17 @@ create_content = function(layerName) {
   return layerName.backgroundColor = null;
 };
 
-container1 = new Layer({
-  x: Align.center,
-  y: Align.center,
-  width: Screen.width,
-  height: Screen.height,
-  backgroundColor: "black"
-});
+container1 = new Layer;
+
+container2 = new Layer;
+
+container3 = new Layer;
+
+creater_container(container1);
+
+creater_container(container2);
+
+creater_container(container3);
 
 header_1 = new Layer({
   html: "Are You Feeling OK?",
@@ -147,11 +159,11 @@ heart_rate = new Layer({
 
 heart_at_start = new Layer({
   parent: heart_rate,
-  width: 120,
+  width: 0.75 * heart_rate.width,
   height: 22,
-  y: 136,
-  x: (184 - 120) / 2,
-  backgroundColor: null,
+  y: (bio_markers_container.height / 2) + 64,
+  x: Align.center,
+  backgroundColor: "white",
   html: "Takeoff: 84 bpm",
   style: bio_s2
 });
@@ -228,18 +240,8 @@ no_btn_1 = new Layer({
 
 create_button(no_btn_1);
 
-container25 = new Layer({
-  width: Screen.width,
-  height: Screen.height,
-  x: Align.center(),
-  y: Align.center(),
-  width: Screen.width,
-  height: Screen.height,
-  backgroundColor: "black"
-});
-
 instructions = new Layer({
-  parent: container25,
+  parent: container2,
   width: 964,
   height: 300,
   x: Align.center,
@@ -499,23 +501,13 @@ relax_text_2 = new Layer({
 });
 
 got_it_btn = new Layer({
-  parent: container25,
+  parent: container2,
   x: Align.center,
   y: instructions.y + instructions.height + 64,
   html: "Got It"
 });
 
 create_button(got_it_btn);
-
-container3 = new Layer({
-  width: Screen.width,
-  height: Screen.height,
-  x: Align.center(),
-  y: Align.center(),
-  width: Screen.width,
-  height: Screen.height,
-  backgroundColor: "black"
-});
 
 sub_container3 = new Layer({
   width: Screen.width,
@@ -556,7 +548,7 @@ myFlow = new FlowComponent;
 myFlow.showNext(container1);
 
 yes_btn_1.onTap(function() {
-  return myFlow.showNext(container25);
+  return myFlow.showNext(container2);
 });
 
 got_it_btn.onTap(function() {

@@ -61,7 +61,7 @@ s2 =
 
 bio_s1 =
   "fontFamily" : "Calibri"
-  "fontSize" : "16pt"
+  "fontSize" : "24pt"
   "textAlign" : "center"
   "lineHeight" : "32px"
   "padding-top" : "64px"
@@ -69,7 +69,7 @@ bio_s1 =
 
 bio_s2 =
   "fontFamily" : "Calibri"
-  "fontSize" : "8pt"
+  "fontSize" : "14pt"
   "textAlign" : "center"
   "lineHeight" : "20px"
   "color" : "#ffffff"
@@ -86,6 +86,13 @@ create_button = (layerName, WW) ->
   layerName.style = s1
   layerName.style.lineHeight = (18 * 4) + "px"
 
+#create container layer
+creater_container = (layerName) ->
+  layerName.x = Align.center
+  layerName.y = Align.center
+  layerName.width = Screen.width
+  layerName.height = Screen.height
+  layerName.backgroundColor = "black"
 #Create header container
 create_header = (layerName) ->
   layerName.width = Screen.width
@@ -100,18 +107,18 @@ create_content = (layerName) ->
     layerName.x = Align.center
     layerName.y = Align.center
     layerName.backgroundColor = null
+
 #-----Layers-----#
 
-
-#Screen for MS detection
+#create container layers
 container1 = new Layer
-  x: Align.center
-  y: Align.center
-  width: Screen.width
-  height: Screen.height
-  # image: "images/debasish-bohidar-288818.jpg"
-  backgroundColor: "black"
+container2 = new Layer
+container3 = new Layer
+creater_container(container1)
+creater_container(container2)
+creater_container(container3)
 
+#Container 1 Header
 header_1 = new Layer
   html: "Are You Feeling OK?"
   parent: container1
@@ -127,8 +134,10 @@ subheader_1 = new Layer
   backgroundColor: null
   style: s2
 
+#Container 1 Content
 bio_markers_container = new Layer
   parent: container1
+
 create_content(bio_markers_container)
 
 heart_rate = new Layer
@@ -144,11 +153,11 @@ heart_rate = new Layer
 
 heart_at_start = new Layer
   parent: heart_rate
-  width: 120
+  width: 0.75 * heart_rate.width
   height: 22
-  y: 136
-  x: (184 - 120)/2
-  backgroundColor: null
+  y: (bio_markers_container.height / 2) + 64
+  x: Align.center
+  backgroundColor: "white"
   html: "Takeoff: 84 bpm"
   style: bio_s2
 
@@ -217,17 +226,9 @@ create_button(no_btn_1)
 
 
 #Steps we will run them through
-container25 = new Layer
-  width: Screen.width
-  height: Screen.height
-  x: Align.center()
-  y: Align.center()
-  width: Screen.width
-  height: Screen.height
-  backgroundColor: "black"
 
 instructions = new Layer
-  parent: container25
+  parent: container2
   width: 964
   height: 300
   x: Align.center
@@ -444,7 +445,7 @@ relax_text_2 = new Layer
   html: "Continue reading or watching your movie on the immersive contoured screens while the horizon passes by in the background."
 
 got_it_btn = new Layer
-  parent: container25
+  parent: container2
   x: Align.center
   y: instructions.y + instructions.height + 64
   html: "Got It"
@@ -453,14 +454,7 @@ create_button(got_it_btn)
 
 
 #BioMetrics Reading Screen
-container3 = new Layer
-  width: Screen.width
-  height: Screen.height
-  x: Align.center()
-  y: Align.center()
-  width: Screen.width
-  height: Screen.height
-  backgroundColor: "black"
+
 
 #Only used for dots
 sub_container3 = new Layer
@@ -503,10 +497,10 @@ myFlow.showNext(container1)
 
 #Flow Action
 yes_btn_1.onTap ->
-  myFlow.showNext(container25)
+  myFlow.showNext(container2)
 
 # continue_btn.onTap ->
-#   myFlow.showNext(container25)
+#   myFlow.showNext(container2)
 
 got_it_btn.onTap ->
   myFlow.showNext(container3)
