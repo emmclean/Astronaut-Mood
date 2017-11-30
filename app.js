@@ -12,7 +12,7 @@ symptoms = ["Nausea", "Vomiting", "Pale skin", "Cold sweats", "Cold or Numb Hand
 
 header_style = {
   "fontFamily": "Montserrat",
-  "fontSize": "32pt",
+  "fontSize": "64pt",
   "textAlign": "center",
   "lineHeight": (Screen.width / 6) + "px",
   "color": "#ffffff"
@@ -52,9 +52,9 @@ s1W = {
 
 s2 = {
   "fontFamily": "Montserrat Light",
-  "fontSize": "18pt",
+  "fontSize": "40pt",
   "textAlign": "center",
-  "lineHeight": "26px",
+  "lineHeight": "48px",
   "color": "#ffffff"
 };
 
