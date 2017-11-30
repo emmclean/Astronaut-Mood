@@ -234,23 +234,18 @@ create_button(no_btn_1)
 
 instructions = new Layer
   parent: container2
-  # width: 964
-  # height: 300
-  # x: Align.center
-  # y: Align.center
-  # backgroundColor: null
 
 create_content(instructions)
 
 rescue = new Layer
   parent: instructions
-  width: 300
-  height: 300
+  width: instructions.height
+  height: instructions.height
   backgroundColor: null
 
 palm_down = new Layer
-  width: 200
-  height: (2 / 7) * 272
+  width: instructions.height * (2 / 3)
+  height: (instructions.height * (2 / 3) * (1 / 7)) * 272
   x: 50
   image: "images/palm_down.png"
   parent: rescue
