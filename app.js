@@ -39,6 +39,7 @@ s1 = {
   "fontFamily": "Montserrat Light",
   "fontSize": "16pt",
   "textAlign": "center",
+  "lineHeight": Screen.width / 8 + "px",
   "color": "#253b56"
 };
 
@@ -69,14 +70,13 @@ bio_s2 = {
 
 create_button = function(layerName, WW) {
   if (!WW) {
-    WW = 48 * 4;
+    WW = Screen.width / 8;
   }
   layerName.width = WW;
-  layerName.height = 18 * 4;
+  layerName.height = Screen.width / 12;
   layerName.borderRadius = 10;
   layerName.backgroundColor = "white";
-  layerName.style = s1;
-  return layerName.style.lineHeight = (18 * 4) + "px";
+  return layerName.style = s1;
 };
 
 creater_container = function(layerName) {

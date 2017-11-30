@@ -41,7 +41,7 @@ s1 =
   "fontFamily" : "Montserrat Light"
   "fontSize" : "16pt"
   "textAlign" : "center"
-  # "lineHeight" : Screen.width / 4 + "px"
+  "lineHeight" : Screen.width / 8 + "px"
   "color" : "#253b56"
 
 s2 =
@@ -70,13 +70,13 @@ bio_s2 =
 #Create Button
 create_button = (layerName, WW) ->
   if !WW
-    WW = 48 * 4
+    WW = Screen.width / 8
   layerName.width = WW
-  layerName.height = 18 * 4
+  layerName.height = Screen.width / 12
   layerName.borderRadius = 10
   layerName.backgroundColor = "white"
   layerName.style = s1
-  layerName.style.lineHeight = (18 * 4) + "px"
+
 
 #create container layer
 creater_container = (layerName) ->
