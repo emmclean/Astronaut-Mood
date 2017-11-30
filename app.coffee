@@ -76,9 +76,9 @@ create_bottom = (layerName) ->
 
 create_button = (layerName, WW) ->
   if !WW
-    WW = Screen.width / 8
+    WW = Screen.width / 6
   layerName.width = WW
-  layerName.height = Screen.width / 12
+  layerName.height = Screen.width / 16
   layerName.borderRadius = 10
   layerName.backgroundColor = "white"
   layerName.style = s1
@@ -211,6 +211,7 @@ create_bottom(button_container)
 yes_btn_1 = new Layer
   parent: button_container
   html: "I Feel Unwell"
+  x: Align.center
 create_button(yes_btn_1)
 
 no_btn_1 = new Layer
