@@ -93,6 +93,7 @@ creater_container = (layerName) ->
   layerName.width = Screen.width
   layerName.height = Screen.height
   layerName.backgroundColor = "black"
+
 #Create header container
 create_header = (layerName) ->
   layerName.width = Screen.width
@@ -154,10 +155,10 @@ heart_rate = new Layer
 heart_at_start = new Layer
   parent: heart_rate
   width: 0.75 * heart_rate.width
-  height: 22
-  y: (bio_markers_container.height / 2) + 64
+  height: 32
+  y: (bio_markers_container.height / 2) + 20
   x: Align.center
-  backgroundColor: "white"
+  backgroundColor: null
   html: "Takeoff: 84 bpm"
   style: bio_s2
 
@@ -175,10 +176,10 @@ blood_press = new Layer
 
 press_at_start = new Layer
   parent: blood_press
-  width: 120
-  height: 22
-  y: 136
-  x: (184 - 120)/2
+  width: 0.75 * heart_rate.width
+  height: 32
+  y: (bio_markers_container.height / 2) + 20
+  x: Align.center
   backgroundColor: null
   html: "Takeoff: 100/60"
   style: bio_s2
@@ -197,10 +198,10 @@ skin_temp = new Layer
 
 temp_at_start = new Layer
   parent: skin_temp
-  width: 120
-  height: 22
-  y: 136
-  x: (184 - 120)/2
+  width: 0.75 * heart_rate.width
+  height: 32
+  y: (bio_markers_container.height / 2) + 20
+  x: Align.center
   backgroundColor: null
   html: "Takeoff: 98.6F"
   style: bio_s2
