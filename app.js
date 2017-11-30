@@ -122,7 +122,7 @@ bio_markers_container = new Layer({
   height: Screen.height / 4,
   x: Align.center,
   y: Align.center,
-  backgroundColor: null
+  backgroundColor: "pink"
 });
 
 heart_rate = new Layer({
@@ -152,7 +152,7 @@ blood_press = new Layer({
   parent: bio_markers_container,
   height: bio_markers_container.height,
   width: bio_markers_container.height,
-  x: heart_rate.width + 16,
+  x: Align.center,
   borderRadius: 184,
   borderWidth: 4,
   borderColor: "orange",
@@ -176,7 +176,7 @@ skin_temp = new Layer({
   parent: bio_markers_container,
   height: bio_markers_container.height,
   width: bio_markers_container.height,
-  x: blood_press.width + blood_press.x + 16,
+  x: Align.right,
   borderRadius: 184,
   borderWidth: 4,
   borderColor: "teal",
