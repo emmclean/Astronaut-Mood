@@ -46,16 +46,16 @@ s1 =
 
 s2 =
   "fontFamily" : "Montserrat"
-  "fontSize" : "40pt"
+  "fontSize" : "32pt"
   "textAlign" : "center"
-  "lineHeight" : "48px"
+  "lineHeight" : "40px"
   "color" : "#ffffff"
 
 bio_s1 =
   "fontFamily" : "Montserrat"
-  "fontSize" : "40pt"
+  "fontSize" : "32pt"
   "textAlign" : "center"
-  "lineHeight" : "48px"
+  "lineHeight" : "40px"
   "padding-top" : (Screen.width / 16) + "px"
   "color" : "#ffffff"
 
