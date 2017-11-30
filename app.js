@@ -1,4 +1,4 @@
-var HR1, HR2, HR3, bio_markers_container, bio_s1, bio_s2, blackAnimation, blood_press, blood_press_denom, blood_press_num, blue, blueAnimation, button_container, container1, container25, container3, create_button, down_up, got_it_btn, green, greenAnimation, h3, hand, hand_grow, hand_shrink, header_1, header_style, heart_at_start, heart_rate, heart_rate_num, horizon_line, horizon_line_2, instructions, movie_gradient, movie_gradient_2, movie_gradient_3, movie_gradient_4, movie_line, movie_screen, msA1, msA2, msA3, msA4, myFlow, no_btn_1, p6_side, palm_down, pitch, press_at_start, purple, purpleAnimation, relax, relax_text, relax_text_2, relief, relief_text, relief_text_2, rescue, rescue_text, rescue_text_2, s1, s1W, s2, s3, skin_temp, stepper, stepper2, stepper3, sub_container3, subheader_1, symptoms, temp_at_start, temp_num, unpitch, up_down, yes_btn_1;
+var HR1, HR2, HR3, bio_markers_container, bio_s1, bio_s2, blackAnimation, blood_press, blood_press_denom, blood_press_num, blue, blueAnimation, button_container, container1, container25, container3, create_button, create_header, down_up, got_it_btn, green, greenAnimation, h3, hand, hand_grow, hand_shrink, header_1, header_style, heart_at_start, heart_rate, heart_rate_num, horizon_line, horizon_line_2, instructions, movie_gradient, movie_gradient_2, movie_gradient_3, movie_gradient_4, movie_line, movie_screen, msA1, msA2, msA3, msA4, myFlow, no_btn_1, p6_side, palm_down, pitch, press_at_start, purple, purpleAnimation, relax, relax_text, relax_text_2, relief, relief_text, relief_text_2, rescue, rescue_text, rescue_text_2, s1, s1W, s2, s3, skin_temp, stepper, stepper2, stepper3, sub_container3, subheader_1, symptoms, temp_at_start, temp_num, unpitch, up_down, yes_btn_1;
 
 heart_rate_num = 147;
 
@@ -14,7 +14,7 @@ header_style = {
   "fontFamily": "Montserrat Light",
   "fontSize": "32pt",
   "textAlign": "center",
-  "lineHeight": "50px",
+  "lineHeight": (Screen.width / 3) + "px",
   "color": "#ffffff"
 };
 
@@ -87,6 +87,13 @@ create_button = function(layerName, WW) {
   return layerName.style.lineHeight = (18 * 4) + "px";
 };
 
+create_header = function(layerName) {
+  layerName.width = Screen.width;
+  layerName.height = Screen.height / 3;
+  layerName.backgroundColor = null;
+  return layerName.style = header_style;
+};
+
 container1 = new Layer({
   x: Align.center,
   y: Align.center,
@@ -97,21 +104,17 @@ container1 = new Layer({
 
 header_1 = new Layer({
   html: "Are You Feeling OK?",
-  parent: container1,
-  y: 150,
-  x: Align.center,
-  width: container1.width,
-  height: 50,
-  backgroundColor: null,
-  style: header_style
+  parent: container1
 });
+
+create_header(header_1);
 
 subheader_1 = new Layer({
   html: "We detected the following biometrics which indicate you might be feeling motion sick",
-  parent: container1,
-  width: container1.width,
+  parent: header_1,
+  width: header_1.width,
   height: 50,
-  y: header_1.y + header_1.height + 16,
+  y: header_1.height / 2,
   backgroundColor: null,
   style: s2
 });
@@ -122,14 +125,14 @@ bio_markers_container = new Layer({
   height: Screen.height / 3,
   x: Align.center,
   y: Align.center,
-  backgroundColor: "pink"
+  backgroundColor: null
 });
 
 heart_rate = new Layer({
   parent: bio_markers_container,
   height: bio_markers_container.height,
   width: bio_markers_container.height,
-  borderRadius: 184,
+  borderRadius: bio_markers_container.height,
   borderWidth: 4,
   borderColor: "red",
   backgroundColor: null,
@@ -153,7 +156,7 @@ blood_press = new Layer({
   height: bio_markers_container.height,
   width: bio_markers_container.height,
   x: Align.center,
-  borderRadius: 184,
+  borderRadius: bio_markers_container.height,
   borderWidth: 4,
   borderColor: "orange",
   backgroundColor: null,
@@ -177,7 +180,7 @@ skin_temp = new Layer({
   height: bio_markers_container.height,
   width: bio_markers_container.height,
   x: Align.right,
-  borderRadius: 184,
+  borderRadius: bio_markers_container.height,
   borderWidth: 4,
   borderColor: "teal",
   backgroundColor: null,

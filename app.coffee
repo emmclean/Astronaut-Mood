@@ -19,7 +19,7 @@ header_style =
   "fontFamily" : "Montserrat Light"
   "fontSize" : "32pt"
   "textAlign" : "center"
-  "lineHeight" : "50px"
+  "lineHeight" : (Screen.width / 3) + "px"
   "color" : "#ffffff"
 
 h3 =
@@ -88,6 +88,14 @@ create_button = (layerName, WW) ->
 
 #-----Layers-----#
 
+#Create header container
+create_header = (layerName) ->
+  layerName.width = Screen.width
+  layerName.height = Screen.height / 3
+  layerName.backgroundColor = null
+  layerName.style = header_style
+
+
 #Screen for MS detection
 container1 = new Layer
   x: Align.center
@@ -100,19 +108,15 @@ container1 = new Layer
 header_1 = new Layer
   html: "Are You Feeling OK?"
   parent: container1
-  y: 150
-  x: Align.center
-  width: container1.width
-  height: 50
-  backgroundColor: null
-  style: header_style
+
+create_header(header_1)
 
 subheader_1 = new Layer
   html: "We detected the following biometrics which indicate you might be feeling motion sick"
-  parent: container1
-  width: container1.width
+  parent: header_1
+  width: header_1.width
   height: 50
-  y: header_1.y + header_1.height + 16
+  y: header_1.height / 2
   backgroundColor: null
   style: s2
 
@@ -122,13 +126,13 @@ bio_markers_container = new Layer
   height: Screen.height / 3#184
   x: Align.center
   y: Align.center
-  backgroundColor: "pink"
+  backgroundColor: null
 
 heart_rate = new Layer
   parent: bio_markers_container
   height: bio_markers_container.height
   width: bio_markers_container.height
-  borderRadius: 184
+  borderRadius: bio_markers_container.height
   borderWidth: 4
   borderColor: "red"
   backgroundColor: null
@@ -150,7 +154,7 @@ blood_press = new Layer
   height: bio_markers_container.height
   width: bio_markers_container.height
   x: Align.center
-  borderRadius: 184
+  borderRadius: bio_markers_container.height
   borderWidth: 4
   borderColor: "orange"
   backgroundColor: null
@@ -172,7 +176,7 @@ skin_temp = new Layer
   height: bio_markers_container.height
   width: bio_markers_container.height
   x: Align.right
-  borderRadius: 184
+  borderRadius: bio_markers_container.height
   borderWidth: 4
   borderColor: "teal"
   backgroundColor: null
