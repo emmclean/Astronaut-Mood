@@ -118,8 +118,8 @@ subheader_1 = new Layer({
 
 bio_markers_container = new Layer({
   parent: container1,
-  width: (184 * 3) + 32,
-  height: 184,
+  width: 0.8 * Screen.width,
+  height: ((0.8 * Screen.width) - 32) / 3,
   x: Align.center,
   y: Align.center,
   backgroundColor: null
