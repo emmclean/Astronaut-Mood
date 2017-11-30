@@ -37,9 +37,9 @@ s3 = {
 
 s1 = {
   "fontFamily": "Montserrat",
-  "fontSize": "32pt",
+  "fontSize": "24pt",
   "textAlign": "center",
-  "lineHeight": Screen.width / 8 + "px",
+  "lineHeight": Screen.width / 16 + "px",
   "color": "#253b56"
 };
 
@@ -83,7 +83,15 @@ create_button = function(layerName, WW) {
   layerName.height = Screen.width / 16;
   layerName.borderRadius = 10;
   layerName.backgroundColor = "white";
-  return layerName.style = s1;
+  layerName.style = s1;
+  layerName.onTouchStart(function() {
+    layerName.backgroundColor = "teal";
+    return layerName.style.color = "white";
+  });
+  return layerName.onTouchEnd(function() {
+    layerName.backgroundColor = "white";
+    return layerName.style.color = "black";
+  });
 };
 
 creater_container = function(layerName) {
@@ -224,27 +232,26 @@ create_bottom(button_container);
 yes_btn_1 = new Layer({
   parent: button_container,
   html: "I Feel Unwell",
-  x: Align.center
+  x: (button_container.width / 2) - 8 - (Screen.width / 6),
+  y: Align.center
 });
 
 create_button(yes_btn_1);
 
 no_btn_1 = new Layer({
   parent: button_container,
-  x: yes_btn_1.width + 16,
-  html: "I'm Ok"
+  html: "I'm Ok",
+  x: (button_container.width / 2) + 8,
+  y: Align.center
 });
 
 create_button(no_btn_1);
 
 instructions = new Layer({
-  parent: container2,
-  width: 964,
-  height: 300,
-  x: Align.center,
-  y: Align.center,
-  backgroundColor: null
+  parent: container2
 });
+
+create_content(instructions);
 
 rescue = new Layer({
   parent: instructions,
