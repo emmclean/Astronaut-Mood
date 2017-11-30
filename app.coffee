@@ -38,8 +38,8 @@ s3 =
   "color" : "#ffffff"
 
 s1 =
-  "fontFamily" : "Montserrat Light"
-  "fontSize" : "16pt"
+  "fontFamily" : "Montserrat"
+  "fontSize" : "32pt"
   "textAlign" : "center"
   "lineHeight" : Screen.width / 8 + "px"
   "color" : "#253b56"
@@ -55,7 +55,7 @@ bio_s1 =
   "fontFamily" : "Montserrat"
   "fontSize" : "32pt"
   "textAlign" : "center"
-  "lineHeight" : "40px"
+  "lineHeight" : "42px"
   "padding-top" : (Screen.width / 16) + "px"
   "color" : "#ffffff"
 
@@ -68,6 +68,12 @@ bio_s2 =
 
 #-----Functions-----#
 #Create Button
+create_bottom = (layerName) ->
+  layerName.width = Screen.width
+  layerName.height = Screen.height / 3
+  layerName.backgroundColor = null
+  layerName.y = Screen.height * (2 / 3)
+
 create_button = (layerName, WW) ->
   if !WW
     WW = Screen.width / 8
@@ -76,7 +82,6 @@ create_button = (layerName, WW) ->
   layerName.borderRadius = 10
   layerName.backgroundColor = "white"
   layerName.style = s1
-
 
 #create container layer
 creater_container = (layerName) ->
@@ -141,7 +146,7 @@ heart_rate = new Layer
   borderWidth: 4
   borderColor: "red"
   backgroundColor: null
-  html: "<b>Heart Rate</b></br></br>" + heart_rate_num + " bpm"
+  html: "<b>Heart Rate</b></br>" + heart_rate_num + " bpm"
   style: bio_s1
 
 heart_at_start = new Layer
@@ -163,7 +168,7 @@ blood_press = new Layer
   borderWidth: 4
   borderColor: "orange"
   backgroundColor: null
-  html: "<b>Blood Pressure</b></br></br>" + blood_press_num + " / " + blood_press_denom
+  html: "<b>Blood Pressure</b></br>" + blood_press_num + " / " + blood_press_denom
   style: bio_s1
 
 press_at_start = new Layer
@@ -185,7 +190,7 @@ skin_temp = new Layer
   borderWidth: 4
   borderColor: "teal"
   backgroundColor: null
-  html: "<b>Temperature</b></br></br>" +  temp_num + "F"
+  html: "<b>Temperature</b></br>" +  temp_num + "F"
   style: bio_s1
 
 temp_at_start = new Layer
@@ -200,11 +205,8 @@ temp_at_start = new Layer
 
 button_container = new Layer
   parent: container1
-  width: (48 * 8) + 16
-  height: (18* 4)
-  x: Align.center
-  y: bio_markers_container.y + bio_markers_container.height + 64
-  backgroundColor: null
+
+create_bottom(button_container)
 
 yes_btn_1 = new Layer
   parent: button_container

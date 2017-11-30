@@ -1,4 +1,4 @@
-var HR1, HR2, HR3, bio_markers_container, bio_s1, bio_s2, blackAnimation, blood_press, blood_press_denom, blood_press_num, blue, blueAnimation, button_container, container1, container2, container3, create_button, create_content, create_header, creater_container, down_up, got_it_btn, green, greenAnimation, h3, hand, hand_grow, hand_shrink, header_1, header_style, heart_at_start, heart_rate, heart_rate_num, horizon_line, horizon_line_2, instructions, movie_gradient, movie_gradient_2, movie_gradient_3, movie_gradient_4, movie_line, movie_screen, msA1, msA2, msA3, msA4, myFlow, no_btn_1, p6_side, palm_down, pitch, press_at_start, purple, purpleAnimation, relax, relax_text, relax_text_2, relief, relief_text, relief_text_2, rescue, rescue_text, rescue_text_2, s1, s2, s3, skin_temp, stepper, stepper2, stepper3, sub_container3, subheader_1, symptoms, temp_at_start, temp_num, unpitch, up_down, yes_btn_1;
+var HR1, HR2, HR3, bio_markers_container, bio_s1, bio_s2, blackAnimation, blood_press, blood_press_denom, blood_press_num, blue, blueAnimation, button_container, container1, container2, container3, create_bottom, create_button, create_content, create_header, creater_container, down_up, got_it_btn, green, greenAnimation, h3, hand, hand_grow, hand_shrink, header_1, header_style, heart_at_start, heart_rate, heart_rate_num, horizon_line, horizon_line_2, instructions, movie_gradient, movie_gradient_2, movie_gradient_3, movie_gradient_4, movie_line, movie_screen, msA1, msA2, msA3, msA4, myFlow, no_btn_1, p6_side, palm_down, pitch, press_at_start, purple, purpleAnimation, relax, relax_text, relax_text_2, relief, relief_text, relief_text_2, rescue, rescue_text, rescue_text_2, s1, s2, s3, skin_temp, stepper, stepper2, stepper3, sub_container3, subheader_1, symptoms, temp_at_start, temp_num, unpitch, up_down, yes_btn_1;
 
 heart_rate_num = 147;
 
@@ -36,8 +36,8 @@ s3 = {
 };
 
 s1 = {
-  "fontFamily": "Montserrat Light",
-  "fontSize": "16pt",
+  "fontFamily": "Montserrat",
+  "fontSize": "32pt",
   "textAlign": "center",
   "lineHeight": Screen.width / 8 + "px",
   "color": "#253b56"
@@ -55,7 +55,7 @@ bio_s1 = {
   "fontFamily": "Montserrat",
   "fontSize": "32pt",
   "textAlign": "center",
-  "lineHeight": "40px",
+  "lineHeight": "42px",
   "padding-top": (Screen.width / 16) + "px",
   "color": "#ffffff"
 };
@@ -66,6 +66,13 @@ bio_s2 = {
   "textAlign": "center",
   "lineHeight": "28px",
   "color": "#ffffff"
+};
+
+create_bottom = function(layerName) {
+  layerName.width = Screen.width;
+  layerName.height = Screen.height / 3;
+  layerName.backgroundColor = null;
+  return layerName.y = Screen.height * (2 / 3);
 };
 
 create_button = function(layerName, WW) {
@@ -145,7 +152,7 @@ heart_rate = new Layer({
   borderWidth: 4,
   borderColor: "red",
   backgroundColor: null,
-  html: "<b>Heart Rate</b></br></br>" + heart_rate_num + " bpm",
+  html: "<b>Heart Rate</b></br>" + heart_rate_num + " bpm",
   style: bio_s1
 });
 
@@ -169,7 +176,7 @@ blood_press = new Layer({
   borderWidth: 4,
   borderColor: "orange",
   backgroundColor: null,
-  html: "<b>Blood Pressure</b></br></br>" + blood_press_num + " / " + blood_press_denom,
+  html: "<b>Blood Pressure</b></br>" + blood_press_num + " / " + blood_press_denom,
   style: bio_s1
 });
 
@@ -193,7 +200,7 @@ skin_temp = new Layer({
   borderWidth: 4,
   borderColor: "teal",
   backgroundColor: null,
-  html: "<b>Temperature</b></br></br>" + temp_num + "F",
+  html: "<b>Temperature</b></br>" + temp_num + "F",
   style: bio_s1
 });
 
@@ -209,13 +216,10 @@ temp_at_start = new Layer({
 });
 
 button_container = new Layer({
-  parent: container1,
-  width: (48 * 8) + 16,
-  height: 18 * 4,
-  x: Align.center,
-  y: bio_markers_container.y + bio_markers_container.height + 64,
-  backgroundColor: null
+  parent: container1
 });
+
+create_bottom(button_container);
 
 yes_btn_1 = new Layer({
   parent: button_container,
