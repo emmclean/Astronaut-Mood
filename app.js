@@ -119,7 +119,7 @@ subheader_1 = new Layer({
 bio_markers_container = new Layer({
   parent: container1,
   width: 0.8 * Screen.width,
-  height: ((0.8 * Screen.width) - 32) / 3,
+  height: Screen.height / 4,
   x: Align.center,
   y: Align.center,
   backgroundColor: null
@@ -127,8 +127,8 @@ bio_markers_container = new Layer({
 
 heart_rate = new Layer({
   parent: bio_markers_container,
-  height: 184,
-  width: 184,
+  height: bio_markers_container.height,
+  width: bio_markers_container.height,
   borderRadius: 184,
   borderWidth: 4,
   borderColor: "red",
@@ -150,9 +150,9 @@ heart_at_start = new Layer({
 
 blood_press = new Layer({
   parent: bio_markers_container,
-  height: 184,
-  width: 184,
-  x: 200,
+  height: bio_markers_container.height,
+  width: bio_markers_container.height,
+  x: heart_rate.width + 16,
   borderRadius: 184,
   borderWidth: 4,
   borderColor: "orange",
@@ -174,9 +174,9 @@ press_at_start = new Layer({
 
 skin_temp = new Layer({
   parent: bio_markers_container,
-  height: 184,
-  width: 184,
-  x: 400,
+  height: bio_markers_container.height,
+  width: bio_markers_container.height,
+  x: blood_press.width + blood_press.x + 16,
   borderRadius: 184,
   borderWidth: 4,
   borderColor: "teal",
