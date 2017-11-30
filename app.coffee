@@ -67,11 +67,34 @@ bio_s2 =
   "color" : "#ffffff"
 
 #-----Functions-----#
+#create container layer
+creater_container = (layerName) ->
+  layerName.x = Align.center
+  layerName.y = Align.center
+  layerName.width = Screen.width
+  layerName.height = Screen.height
+  layerName.backgroundColor = "black"
+
+#Create header container
+create_header = (layerName) ->
+  layerName.width = Screen.width
+  layerName.height = Screen.height / 3
+  layerName.backgroundColor = "pink"
+  layerName.style = header_style
+
+#create content box
+create_content = (layerName) ->
+    layerName.width = 0.8 * Screen.width#(184 * 3) + 32
+    layerName.height = Screen.height / 3#184
+    layerName.x = Align.center
+    layerName.y = Align.center
+    layerName.backgroundColor = "teal"
+
 #Create Button
 create_bottom = (layerName) ->
   layerName.width = Screen.width
   layerName.height = Screen.height / 3
-  layerName.backgroundColor = null
+  layerName.backgroundColor = "purple"
   layerName.y = Screen.height * (2 / 3)
 
 create_button = (layerName, WW) ->
@@ -89,29 +112,6 @@ create_button = (layerName, WW) ->
   layerName.onTouchEnd ->
     layerName.backgroundColor = "white"
     layerName.style.color = "black"
-
-#create container layer
-creater_container = (layerName) ->
-  layerName.x = Align.center
-  layerName.y = Align.center
-  layerName.width = Screen.width
-  layerName.height = Screen.height
-  layerName.backgroundColor = "black"
-
-#Create header container
-create_header = (layerName) ->
-  layerName.width = Screen.width
-  layerName.height = Screen.height / 3
-  layerName.backgroundColor = null
-  layerName.style = header_style
-
-#create content box
-create_content = (layerName) ->
-    layerName.width = 0.8 * Screen.width#(184 * 3) + 32
-    layerName.height = Screen.height / 3#184
-    layerName.x = Align.center
-    layerName.y = Align.center
-    layerName.backgroundColor = null
 
 #-----Layers-----#
 

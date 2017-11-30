@@ -68,10 +68,33 @@ bio_s2 = {
   "color": "#ffffff"
 };
 
+creater_container = function(layerName) {
+  layerName.x = Align.center;
+  layerName.y = Align.center;
+  layerName.width = Screen.width;
+  layerName.height = Screen.height;
+  return layerName.backgroundColor = "black";
+};
+
+create_header = function(layerName) {
+  layerName.width = Screen.width;
+  layerName.height = Screen.height / 3;
+  layerName.backgroundColor = "pink";
+  return layerName.style = header_style;
+};
+
+create_content = function(layerName) {
+  layerName.width = 0.8 * Screen.width;
+  layerName.height = Screen.height / 3;
+  layerName.x = Align.center;
+  layerName.y = Align.center;
+  return layerName.backgroundColor = "teal";
+};
+
 create_bottom = function(layerName) {
   layerName.width = Screen.width;
   layerName.height = Screen.height / 3;
-  layerName.backgroundColor = null;
+  layerName.backgroundColor = "purple";
   return layerName.y = Screen.height * (2 / 3);
 };
 
@@ -92,29 +115,6 @@ create_button = function(layerName, WW) {
     layerName.backgroundColor = "white";
     return layerName.style.color = "black";
   });
-};
-
-creater_container = function(layerName) {
-  layerName.x = Align.center;
-  layerName.y = Align.center;
-  layerName.width = Screen.width;
-  layerName.height = Screen.height;
-  return layerName.backgroundColor = "black";
-};
-
-create_header = function(layerName) {
-  layerName.width = Screen.width;
-  layerName.height = Screen.height / 3;
-  layerName.backgroundColor = null;
-  return layerName.style = header_style;
-};
-
-create_content = function(layerName) {
-  layerName.width = 0.8 * Screen.width;
-  layerName.height = Screen.height / 3;
-  layerName.x = Align.center;
-  layerName.y = Align.center;
-  return layerName.backgroundColor = null;
 };
 
 container1 = new Layer;
