@@ -141,7 +141,7 @@ heart_rate = new Layer
   borderWidth: 4
   borderColor: "red"
   backgroundColor: null
-  html: "<b>Heart Rate</b></br>" + heart_rate_num + " bpm"
+  html: "<b>Heart Rate</b></br></br>" + heart_rate_num + " bpm"
   style: bio_s1
 
 heart_at_start = new Layer
@@ -163,7 +163,7 @@ blood_press = new Layer
   borderWidth: 4
   borderColor: "orange"
   backgroundColor: null
-  html: "<b>Blood Pressure</b></br>" + blood_press_num + " / " + blood_press_denom
+  html: "<b>Blood Pressure</b></br></br>" + blood_press_num + " / " + blood_press_denom
   style: bio_s1
 
 press_at_start = new Layer
@@ -185,7 +185,7 @@ skin_temp = new Layer
   borderWidth: 4
   borderColor: "teal"
   backgroundColor: null
-  html: "<b>Temperature</b></br>" +  temp_num + "F"
+  html: "<b>Temperature</b></br></br>" +  temp_num + "F"
   style: bio_s1
 
 temp_at_start = new Layer
