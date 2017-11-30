@@ -16,14 +16,14 @@ symptoms = ["Nausea", "Vomiting", "Pale skin", "Cold sweats", "Cold or Numb Hand
 
 #-----Styles-----#
 header_style =
-  "fontFamily" : "Calibri"
+  "fontFamily" : "Montserrat"
   "fontSize" : "32pt"
   "textAlign" : "center"
   "lineHeight" : (Screen.width / 6) + "px"
   "color" : "#ffffff"
 
 h3 =
-  "fontFamily" : "Calibri"
+  "fontFamily" : "Montserrat"
   "fontSize" : "18pt"
   "textAlign" : "center"
   "color" : "#fff"
@@ -31,14 +31,14 @@ h3 =
   "color" : "#fff"
 
 s3 =
-  "fontFamily" : "Calibri"
+  "fontFamily" : "Montserrat"
   "fontSize" : "10pt"
   "textAlign" : "center"
   "lineHeight" : "18px"
   "color" : "#ffffff"
 
 s1 =
-  "fontFamily" : "Calibri Light"
+  "fontFamily" : "Montserrat Light"
   "fontSize" : "16pt"
   "textAlign" : "center"
   # "lineHeight" : Screen.width / 4 + "px"
@@ -53,14 +53,14 @@ s1W =
   "color" : "#253b56"
 
 s2 =
-  "fontFamily" : "Calibri Light"
+  "fontFamily" : "Montserrat Light"
   "fontSize" : "18pt"
   "textAlign" : "center"
   "lineHeight" : "26px"
   "color" : "#ffffff"
 
 bio_s1 =
-  "fontFamily" : "Calibri"
+  "fontFamily" : "Montserrat"
   "fontSize" : "24pt"
   "textAlign" : "center"
   "lineHeight" : "32px"
@@ -68,7 +68,7 @@ bio_s1 =
   "color" : "#ffffff"
 
 bio_s2 =
-  "fontFamily" : "Calibri"
+  "fontFamily" : "Montserrat"
   "fontSize" : "14pt"
   "textAlign" : "center"
   "lineHeight" : "20px"
