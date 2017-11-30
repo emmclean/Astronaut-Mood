@@ -14,7 +14,7 @@ header_style = {
   "fontFamily": "Calibri",
   "fontSize": "32pt",
   "textAlign": "center",
-  "lineHeight": (Screen.width / 3) + "px",
+  "lineHeight": (Screen.width / 6) + "px",
   "color": "#ffffff"
 };
 
