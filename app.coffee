@@ -63,7 +63,7 @@ bio_s1 =
   "fontFamily" : "Montserrat"
   "fontSize" : "24pt"
   "textAlign" : "center"
-  "lineHeight" : "32px"
+  "lineHeight" : (Screen.width / 4) + "px"
   "padding-top" : "64px"
   "color" : "#ffffff"
 
