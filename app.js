@@ -263,11 +263,11 @@ rescue = new Layer({
   parent: instructions,
   width: instructions.height,
   height: instructions.height,
-  backgroundColor: "yellow"
+  backgroundColor: null
 });
 
 palm_down = new Layer({
-  width: recue.width,
+  width: rescue.width,
   height: (rescue.width / 700) * 272,
   image: "images/palm_down.png",
   parent: rescue
