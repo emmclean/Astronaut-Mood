@@ -433,7 +433,7 @@ movie_line = new Layer({
   width: (2 / 3) * relax.width,
   height: 1,
   x: Align.center,
-  y: 65,
+  y: (1 / 3) * relax.width,
   backgroundColor: "null",
   borderColor: "white",
   borderWidth: 1
@@ -443,7 +443,7 @@ movie_screen = new Layer({
   parent: relax,
   x: Align.center(),
   width: (8 / 30) * relax.width,
-  height: (45 / 80) * relax.width,
+  height: (45 / 300) * relax.width,
   y: (1 / 3) * relax.width,
   backgroundColor: "black",
   borderColor: "white",
