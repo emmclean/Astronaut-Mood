@@ -467,6 +467,12 @@ create_button(got_it_btn)
 
 #BioMetrics Reading Screen
 
+header3 = new Layer
+  parent: container3
+  html: "Press Down on the Hand"
+
+create_header(header3)
+
 #Create Hand
 hand = new Layer
   parent: container3
