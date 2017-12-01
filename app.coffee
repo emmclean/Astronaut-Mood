@@ -258,7 +258,7 @@ palm_down = new Layer
 p6_side = new Layer
   width: rescue.width * (5 / 12)
   height: (rescue.width / 952) * 618 * (5 / 12)
-  y: palm_down.height + 8
+  y: palm_down.height + 4
   image: "images/side_view_p6.png"
   parent: rescue
 
@@ -352,7 +352,7 @@ relief_text = new Layer
 relief_text_2 = new Layer
   parent: relief
   width: instructions.height
-  height: (instructions.height / 3) - 40
+  height: (instructions.height / 3)
   y: Align.bottom
   style: s3
   backgroundColor: null
@@ -364,7 +364,7 @@ relax = new Layer
   width: instructions.height
   height: instructions.height
   x: Align.right
-  backgroundColor: null
+  backgroundColor: "yellow"
 
 movie_gradient = new Gradient
     start: "#000"
@@ -388,7 +388,7 @@ movie_gradient_4 = new Gradient
 
 movie_line = new Layer
   parent: relax
-  width: (2 / 4) * relax.width
+  width: (2 / 3) * relax.width
   height: 1
   x: Align.center
   y: 65
@@ -399,9 +399,9 @@ movie_line = new Layer
 movie_screen = new Layer
   parent: relax
   x: Align.center()
-  width: 80
-  height: 45
-  y: 40
+  width: (8 / 30) * relax.width
+  height: (45 / 80) * relax.width
+  y: (1 / 3) * relax.width
   backgroundColor: "black"
   borderColor: "white"
   borderWidth: 1
