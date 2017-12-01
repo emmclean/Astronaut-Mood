@@ -444,7 +444,7 @@ movie_screen = new Layer({
   x: Align.center(),
   width: (8 / 30) * relax.width,
   height: (45 / 300) * relax.width,
-  y: (1 / 3) * relax.width,
+  y: ((1 / 3) * relax.width) - ((8 / 15) * relax.width),
   backgroundColor: "black",
   borderColor: "white",
   borderWidth: 1
