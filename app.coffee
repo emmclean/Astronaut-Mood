@@ -232,10 +232,16 @@ create_button(no_btn_1)
 
 #Steps we will run them through
 
+header2 = new Layer
+  parent: container2
+
+create_header(header2)
+
 instructions = new Layer
   parent: container2
 
 create_content(instructions)
+
 
 rescue = new Layer
   parent: instructions
