@@ -533,8 +533,8 @@ create_header(header3);
 
 hand = new Layer({
   parent: container3,
-  width: container3.width,
-  height: (540.5009 / container3.width) * 640.30402,
+  width: container3.width * (2 / 3),
+  height: (540.5009 / (container3.width * (2 / 3))) * 640.30402,
   x: Align.center,
   y: container3.height / 3,
   backgroundColor: "null",
