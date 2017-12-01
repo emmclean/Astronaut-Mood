@@ -22,11 +22,19 @@ header_style =
   "lineHeight" : (Screen.width / 6) + "px"
   "color" : "#ffffff"
 
+h3 =
+  "fontFamily" : "Montserrat"
+  "fontSize" : "24pt"
+  "textAlign" : "center"
+  "color" : "#fff"
+  "lineHeight" : "32px"
+  "color" : "#fff"
+
 s3 =
   "fontFamily" : "Montserrat"
-  "fontSize" : "10pt"
+  "fontSize" : "18pt"
   "textAlign" : "center"
-  "lineHeight" : "18px"
+  "lineHeight" : "26px"
   "color" : "#ffffff"
 
 s1 =
@@ -260,7 +268,7 @@ rescue_text = new Layer
   width: instructions.height
   height: instructions.height / 3
   y: Align.bottom
-  style: s2
+  style: h3
   backgroundColor: null
   html: "Rescue from Nausea"
 
@@ -269,7 +277,7 @@ rescue_text_2 = new Layer
   width: instructions.height
   height: instructions.height / 3
   y: Align.bottom
-  style: s1
+  style: s3
   backgroundColor: null
   html: "Putting pressure on the P6 accupressure point (median line of the underside of the wrist) is shown to reduce the feeling of nausea in up to 60% of patients."
 
@@ -337,7 +345,7 @@ relief_text = new Layer
   width: 300
   height: 112
   y: Align.bottom
-  style: s2
+  style: h3
   backgroundColor: null
   html: "Relief of Symptoms"
 
@@ -346,7 +354,7 @@ relief_text_2 = new Layer
   width: 300
   height: 76
   y: Align.bottom
-  style: s1
+  style: s3
   backgroundColor: null
   html: "Having visual input that confirms the motion you are feeling will help prevent motion sickness from onsetting again."
 
@@ -430,7 +438,7 @@ relax_text = new Layer
   width: 300
   height: 112
   y: Align.bottom
-  style: s2
+  style: h3
   backgroundColor: null
   html: "Relax in Flight"
 
@@ -439,7 +447,7 @@ relax_text_2 = new Layer
   width: 300
   height: 76
   y: Align.bottom
-  style: s1
+  style: s3
   backgroundColor: null
   html: "Continue reading or watching your movie on the immersive contoured screens while the horizon passes by in the background."
 
