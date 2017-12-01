@@ -364,7 +364,7 @@ relax = new Layer
   width: instructions.height
   height: instructions.height
   x: Align.right
-  backgroundColor: "yellow"
+  backgroundColor: null
 
 movie_gradient = new Gradient
     start: "#000"
@@ -435,8 +435,8 @@ msA4.onAnimationEnd ->
 
 relax_text = new Layer
   parent: relax
-  width: 300
-  height: 112
+  width: instructions.height
+  height: (instructions.height / 3) + 40
   y: Align.bottom
   style: h3
   backgroundColor: null
@@ -444,17 +444,21 @@ relax_text = new Layer
 
 relax_text_2 = new Layer
   parent: relax
-  width: 300
-  height: 76
+  width: instructions.height
+  height: (instructions.height / 3)
   y: Align.bottom
   style: s3
   backgroundColor: null
   html: "Continue reading or watching your movie on the immersive contoured screens while the horizon passes by in the background."
 
-got_it_btn = new Layer
+button_container_2 = new Layer
   parent: container2
+create_bottom(button_container_2)
+
+got_it_btn = new Layer
+  parent: button_container_2
   x: Align.center
-  y: instructions.y + instructions.height + 64
+  y: Align.center
   html: "Got It"
 create_button(got_it_btn)
 
