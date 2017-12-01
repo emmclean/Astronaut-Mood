@@ -308,7 +308,7 @@ horizon_line_2 = new Layer
   width: (5 / 6) * relief.width
   height: 1
   x: (1 / 12) * relief.width
-  y: (1 / 6) * releif.width
+  y: (1 / 6) * relief.width
   backgroundColor: "null"
   borderWidth: 1
   borderColor: "white"
