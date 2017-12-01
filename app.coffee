@@ -250,9 +250,8 @@ rescue = new Layer
   backgroundColor: "yellow"
 
 palm_down = new Layer
-  width: instructions.height * (2 / 3)
-  height: (instructions.height * (2 / 21)) * 272
-  x: instructions.height * (1 / 6)
+  width: recue.width
+  height: (rescue.width / 700) * 272
   image: "images/palm_down.png"
   parent: rescue
 
