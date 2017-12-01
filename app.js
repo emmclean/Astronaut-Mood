@@ -257,7 +257,7 @@ rescue = new Layer({
   parent: instructions,
   width: instructions.height,
   height: instructions.height,
-  backgroundColor: null
+  backgroundColor: "yellow"
 });
 
 palm_down = new Layer({
