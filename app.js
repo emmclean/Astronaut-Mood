@@ -274,8 +274,8 @@ palm_down = new Layer({
 });
 
 p6_side = new Layer({
-  width: rescue.width * (1 / 3),
-  height: (rescue.width / 952) * 618 * (1 / 3),
+  width: rescue.width * (1 / 2),
+  height: (rescue.width / 952) * 618 * (1 / 2),
   y: palm_down.height + 16,
   image: "images/side_view_p6.png",
   parent: rescue
@@ -345,10 +345,10 @@ horizon_line_2 = new Layer({
 
 horizon_line = new Layer({
   parent: relief,
-  width: 250,
+  width: (5 / 6) * relief.width,
   height: 1,
-  x: 15,
-  y: 50,
+  x: (1 / 12) * relief.width,
+  y: (1 / 6) * relief.width,
   backgroundColor: "null",
   borderWidth: 1,
   borderColor: "white"
@@ -378,8 +378,8 @@ unpitch.onAnimationEnd(function() {
 
 relief_text = new Layer({
   parent: relief,
-  width: 300,
-  height: 112,
+  width: instructions.height,
+  height: instructions.height,
   y: Align.bottom,
   style: h3,
   backgroundColor: null,
@@ -388,8 +388,8 @@ relief_text = new Layer({
 
 relief_text_2 = new Layer({
   parent: relief,
-  width: 300,
-  height: 76,
+  width: instructions.height,
+  height: (instructions.height / 3) - 40,
   y: Align.bottom,
   style: s3,
   backgroundColor: null,
@@ -398,9 +398,9 @@ relief_text_2 = new Layer({
 
 relax = new Layer({
   parent: instructions,
-  width: 300,
-  height: 300,
-  x: 664,
+  width: instructions.height,
+  height: instructions.height,
+  x: Align.right,
   backgroundColor: null
 });
 
@@ -430,7 +430,7 @@ movie_gradient_4 = new Gradient({
 
 movie_line = new Layer({
   parent: relax,
-  width: 200,
+  width: (2 / 4) * relax.width,
   height: 1,
   x: Align.center,
   y: 65,
