@@ -267,8 +267,8 @@ rescue = new Layer({
 });
 
 palm_down = new Layer({
-  width: rescue.width * (5 / 6),
-  height: (rescue.width / 700) * 272 * (5 / 6),
+  width: rescue.width * (2 / 3),
+  height: (rescue.width / 700) * 272 * (2 / 3),
   image: "images/palm_down.png",
   parent: rescue
 });
@@ -444,7 +444,7 @@ movie_screen = new Layer({
   x: Align.center(),
   width: (8 / 30) * relax.width,
   height: (45 / 300) * relax.width,
-  y: ((1 / 3) * relax.width) - ((8 / 15) * relax.width),
+  y: ((1 / 3) * relax.width) - ((45 / 600) * relax.width),
   backgroundColor: "black",
   borderColor: "white",
   borderWidth: 1
