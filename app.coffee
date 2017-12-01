@@ -274,14 +274,14 @@ rescue_text = new Layer
 rescue_text_2 = new Layer
   parent: rescue
   width: instructions.height
-  height: (instructions.height / 3) - 32
+  height: (instructions.height / 3) - 40
   y: Align.bottom
   style: s3
   backgroundColor: null
   html: "Putting pressure on the P6 accupressure point (median line of the underside of the wrist) is shown to reduce the feeling of nausea in up to 60% of patients."
 
 up_down = new Animation palm_down,
-  y: 15
+  y: 20
   time: 0.4
   curve: "ease-in-out"
 
@@ -298,17 +298,17 @@ down_up.onAnimationEnd ->
 
 relief = new Layer
   parent: instructions
-  width: 300
-  height: 300
-  x: 332
+  width: instructions.height
+  height: instructions.height
+  x: Align.center
   backgroundColor: null
 
 horizon_line_2 = new Layer
   parent: relief
-  width: 250
+  width: (5 / 6) * relief.width
   height: 1
-  x: 15
-  y: 50
+  x: (1 / 12) * relief.width
+  y: (1 / 6) * releif.width
   backgroundColor: "null"
   borderWidth: 1
   borderColor: "white"

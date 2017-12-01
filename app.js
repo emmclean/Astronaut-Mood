@@ -294,7 +294,7 @@ rescue_text = new Layer({
 rescue_text_2 = new Layer({
   parent: rescue,
   width: instructions.height,
-  height: (instructions.height / 3) - 32,
+  height: (instructions.height / 3) - 40,
   y: Align.bottom,
   style: s3,
   backgroundColor: null,
@@ -302,7 +302,7 @@ rescue_text_2 = new Layer({
 });
 
 up_down = new Animation(palm_down, {
-  y: 15,
+  y: 20,
   time: 0.4,
   curve: "ease-in-out"
 });
@@ -325,18 +325,18 @@ down_up.onAnimationEnd(function() {
 
 relief = new Layer({
   parent: instructions,
-  width: 300,
-  height: 300,
-  x: 332,
+  width: instructions.height,
+  height: instructions.height,
+  x: Align.center,
   backgroundColor: null
 });
 
 horizon_line_2 = new Layer({
   parent: relief,
-  width: 250,
+  width: (5 / 6) * relief.width,
   height: 1,
-  x: 15,
-  y: 50,
+  x: (1 / 12) * relief.width,
+  y: (1 / 6) * releif.width,
   backgroundColor: "null",
   borderWidth: 1,
   borderColor: "white",
