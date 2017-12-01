@@ -274,9 +274,9 @@ palm_down = new Layer({
 });
 
 p6_side = new Layer({
-  width: rescue.width * (1 / 2),
-  height: (rescue.width / 952) * 618 * (1 / 2),
-  y: palm_down.height + 16,
+  width: rescue.width * (5 / 12),
+  height: (rescue.width / 952) * 618 * (5 / 12),
+  y: palm_down.height + 8,
   image: "images/side_view_p6.png",
   parent: rescue
 });
@@ -284,7 +284,7 @@ p6_side = new Layer({
 rescue_text = new Layer({
   parent: rescue,
   width: instructions.height,
-  height: instructions.height / 3,
+  height: (instructions.height / 3) + 40,
   y: Align.bottom,
   style: h3,
   backgroundColor: null,
@@ -294,7 +294,7 @@ rescue_text = new Layer({
 rescue_text_2 = new Layer({
   parent: rescue,
   width: instructions.height,
-  height: (instructions.height / 3) - 40,
+  height: instructions.height / 3,
   y: Align.bottom,
   style: s3,
   backgroundColor: null,
@@ -336,7 +336,7 @@ horizon_line_2 = new Layer({
   width: (5 / 6) * relief.width,
   height: 1,
   x: (1 / 12) * relief.width,
-  y: (1 / 6) * relief.width,
+  y: (1 / 3) * relief.width,
   backgroundColor: "null",
   borderWidth: 1,
   borderColor: "white",
@@ -348,7 +348,7 @@ horizon_line = new Layer({
   width: (5 / 6) * relief.width,
   height: 1,
   x: (1 / 12) * relief.width,
-  y: (1 / 6) * relief.width,
+  y: (1 / 3) * relief.width,
   backgroundColor: "null",
   borderWidth: 1,
   borderColor: "white"
@@ -379,7 +379,7 @@ unpitch.onAnimationEnd(function() {
 relief_text = new Layer({
   parent: relief,
   width: instructions.height,
-  height: instructions.height,
+  height: (instructions.height / 3) + 40,
   y: Align.bottom,
   style: h3,
   backgroundColor: null,
