@@ -269,9 +269,8 @@ palm_down = new Layer({
 });
 
 p6_side = new Layer({
-  width: 110,
-  height: (110 / 952) * 618,
-  x: 40,
+  width: (110 / 300) * Instructions.height,
+  height: (((110 / 300) * Instructions.height) / 952) * 618,
   y: palm_down.height + 16,
   image: "images/side_view_p6.png",
   parent: rescue
