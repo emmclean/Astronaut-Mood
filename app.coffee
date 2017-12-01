@@ -268,8 +268,8 @@ rescue_text = new Layer
 
 rescue_text_2 = new Layer
   parent: rescue
-  width: 300
-  height: 76
+  width: instructions.height
+  height: instructions.height / 3
   y: Align.bottom
   style: s3
   backgroundColor: null
