@@ -79,7 +79,7 @@ creater_container = (layerName) ->
 create_header = (layerName) ->
   layerName.width = Screen.width
   layerName.height = Screen.height / 3
-  layerName.backgroundColor = "pink"
+  layerName.backgroundColor = null
   layerName.style = header_style
 
 #create content box
@@ -88,13 +88,13 @@ create_content = (layerName) ->
     layerName.height = Screen.height / 3#184
     layerName.x = Align.center
     layerName.y = Align.center
-    layerName.backgroundColor = "teal"
+    layerName.backgroundColor = null
 
 #Create Button
 create_bottom = (layerName) ->
   layerName.width = Screen.width
   layerName.height = Screen.height / 3
-  layerName.backgroundColor = "purple"
+  layerName.backgroundColor = null
   layerName.y = Screen.height * (2 / 3)
 
 create_button = (layerName, WW) ->

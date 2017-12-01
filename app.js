@@ -79,7 +79,7 @@ creater_container = function(layerName) {
 create_header = function(layerName) {
   layerName.width = Screen.width;
   layerName.height = Screen.height / 3;
-  layerName.backgroundColor = "pink";
+  layerName.backgroundColor = null;
   return layerName.style = header_style;
 };
 
@@ -88,13 +88,13 @@ create_content = function(layerName) {
   layerName.height = Screen.height / 3;
   layerName.x = Align.center;
   layerName.y = Align.center;
-  return layerName.backgroundColor = "teal";
+  return layerName.backgroundColor = null;
 };
 
 create_bottom = function(layerName) {
   layerName.width = Screen.width;
   layerName.height = Screen.height / 3;
-  layerName.backgroundColor = "purple";
+  layerName.backgroundColor = null;
   return layerName.y = Screen.height * (2 / 3);
 };
 
