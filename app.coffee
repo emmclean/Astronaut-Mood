@@ -256,8 +256,8 @@ palm_down = new Layer
   parent: rescue
 
 p6_side = new Layer
-  width: rescue.width * (2 / 3)
-  height: (rescue.width / 952) * 618 * (2 / 3)
+  width: rescue.width * (1 / 3)
+  height: (rescue.width / 952) * 618 * (1 / 3)
   y: palm_down.height + 16
   image: "images/side_view_p6.png"
   parent: rescue
