@@ -526,8 +526,8 @@ create_button(got_it_btn);
 
 hand = new Layer({
   parent: container3,
-  width: (1 / 3) * container3.width,
-  height: ((1 / 3) * (540.5009 / container3.width)) * 640.30402,
+  width: (2 / 3) * container3.width,
+  height: (540.5009 / ((2 / 3) * container3.width)) * 640.30402,
   x: Align.center,
   y: Screen.height - 640.30402,
   backgroundColor: "null",
