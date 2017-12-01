@@ -250,14 +250,14 @@ rescue = new Layer
   backgroundColor: null
 
 palm_down = new Layer
-  width: rescue.width
-  height: (rescue.width / 700) * 272
+  width: rescue.width * (5/6)
+  height: (rescue.width / 700) * 272 * (5/6)
   image: "images/palm_down.png"
   parent: rescue
 
 p6_side = new Layer
-  width: (110 / 300) * instructions.height
-  height: (((110 / 300) * instructions.height) / 952) * 618
+  width: rescue.width * (2 / 3)
+  height: (rescue.width / 952) * 618 * (2 / 3)
   y: palm_down.height + 16
   image: "images/side_view_p6.png"
   parent: rescue
