@@ -234,6 +234,7 @@ create_button(no_btn_1)
 
 header2 = new Layer
   parent: container2
+  html: "Follow These Steps to Wellness"
 
 create_header(header2)
 
@@ -466,22 +467,11 @@ create_button(got_it_btn)
 
 #BioMetrics Reading Screen
 
-
-#Only used for dots
-sub_container3 = new Layer
-  width: Screen.width
-  height: Screen.height
-  x: Align.center()
-  y: Align.center()
-  backgroundColor: "black"
-  parent: container3
-  visible: false
-
 #Create Hand
 hand = new Layer
   parent: container3
-  width: 540.5009
-  height: 640.30402
+  width: (1 / 3) * container3.width
+  height: ((1 / 3) * (540.5009 / container3.width)) * 640.30402
   x: Align.center
   y: Screen.height - 640.30402
   backgroundColor: "null"

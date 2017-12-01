@@ -1,4 +1,4 @@
-var HR1, HR2, HR3, bio_markers_container, bio_s1, bio_s2, blackAnimation, blood_press, blood_press_denom, blood_press_num, blue, blueAnimation, button_container, button_container_2, container1, container2, container3, create_bottom, create_button, create_content, create_header, creater_container, down_up, got_it_btn, green, greenAnimation, h3, hand, hand_grow, hand_shrink, header2, header_1, header_style, heart_at_start, heart_rate, heart_rate_num, horizon_line, horizon_line_2, instructions, movie_gradient, movie_gradient_2, movie_gradient_3, movie_gradient_4, movie_line, movie_screen, msA1, msA2, msA3, msA4, myFlow, no_btn_1, p6_side, palm_down, pitch, press_at_start, purple, purpleAnimation, relax, relax_text, relax_text_2, relief, relief_text, relief_text_2, rescue, rescue_text, rescue_text_2, s1, s2, s3, skin_temp, stepper, stepper2, stepper3, sub_container3, subheader_1, symptoms, temp_at_start, temp_num, unpitch, up_down, yes_btn_1;
+var HR1, HR2, HR3, bio_markers_container, bio_s1, bio_s2, blackAnimation, blood_press, blood_press_denom, blood_press_num, blue, blueAnimation, button_container, button_container_2, container1, container2, container3, create_bottom, create_button, create_content, create_header, creater_container, down_up, got_it_btn, green, greenAnimation, h3, hand, hand_grow, hand_shrink, header2, header_1, header_style, heart_at_start, heart_rate, heart_rate_num, horizon_line, horizon_line_2, instructions, movie_gradient, movie_gradient_2, movie_gradient_3, movie_gradient_4, movie_line, movie_screen, msA1, msA2, msA3, msA4, myFlow, no_btn_1, p6_side, palm_down, pitch, press_at_start, purple, purpleAnimation, relax, relax_text, relax_text_2, relief, relief_text, relief_text_2, rescue, rescue_text, rescue_text_2, s1, s2, s3, skin_temp, stepper, stepper2, stepper3, subheader_1, symptoms, temp_at_start, temp_num, unpitch, up_down, yes_btn_1;
 
 heart_rate_num = 147;
 
@@ -248,7 +248,8 @@ no_btn_1 = new Layer({
 create_button(no_btn_1);
 
 header2 = new Layer({
-  parent: container2
+  parent: container2,
+  html: "Follow These Steps to Wellness"
 });
 
 create_header(header2);
@@ -523,20 +524,10 @@ got_it_btn = new Layer({
 
 create_button(got_it_btn);
 
-sub_container3 = new Layer({
-  width: Screen.width,
-  height: Screen.height,
-  x: Align.center(),
-  y: Align.center(),
-  backgroundColor: "black",
-  parent: container3,
-  visible: false
-});
-
 hand = new Layer({
   parent: container3,
-  width: 540.5009,
-  height: 640.30402,
+  width: (1 / 3) * container3.width,
+  height: ((1 / 3) * (540.5009 / container3.width)) * 640.30402,
   x: Align.center,
   y: Screen.height - 640.30402,
   backgroundColor: "null",
