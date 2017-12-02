@@ -158,6 +158,21 @@ arrow = new Layer
   width: 90
   height: 90
 
+arrow_grow = new Animation  arrow,
+  scale: 1.1
+  time: 0.6
+  curve: "ease-in-out"
+
+arrow_shrink = new Animation arrow,
+  scale: 1
+  time: 0.6
+  curve: "ease-in-out"
+
+arrow_grow.start()
+arrow_grow.onAnimationEnd ->
+  arrow_shrink.start()
+arrow_shrink.onAnimationEnd ->
+  arrow_grow.start()
 A2 = new Layer
   parent: header_1
   x: Screen.width - 196

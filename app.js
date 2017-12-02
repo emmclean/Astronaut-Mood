@@ -1,4 +1,4 @@
-var A1, A1_sub, A2, A2_sub, HR1, HR2, HR3, arrow, bio_markers_container, bio_s1, bio_s2, blackAnimation, blood_press, blood_press_denom, blood_press_num, blue, blueAnimation, button_container, button_container_2, container1, container2, container3, create_bottom, create_button, create_content, create_header, creater_container, down_up, got_it_btn, green, greenAnimation, h3, hand, hand_grow, hand_shrink, header2, header3, header_1, header_style, heart_at_start, heart_rate, heart_rate_num, horizon_line, horizon_line_2, instructions, movie_gradient, movie_gradient_2, movie_gradient_3, movie_gradient_4, movie_line, movie_screen, msA1, msA2, msA3, msA4, myFlow, no_btn_1, p6_side, palm_down, pitch, press_at_start, purple, purpleAnimation, relax, relax_text, relax_text_2, relief, relief_text, relief_text_2, rescue, rescue_text, rescue_text_2, s1, s2, s3, skin_temp, stepper, stepper2, stepper3, subheader_1, symptoms, temp_at_start, temp_num, unpitch, up_down, yes_btn_1;
+var A1, A1_sub, A2, A2_sub, HR1, HR2, HR3, arrow, arrow_grow, arrow_shrink, bio_markers_container, bio_s1, bio_s2, blackAnimation, blood_press, blood_press_denom, blood_press_num, blue, blueAnimation, button_container, button_container_2, container1, container2, container3, create_bottom, create_button, create_content, create_header, creater_container, down_up, got_it_btn, green, greenAnimation, h3, hand, hand_grow, hand_shrink, header2, header3, header_1, header_style, heart_at_start, heart_rate, heart_rate_num, horizon_line, horizon_line_2, instructions, movie_gradient, movie_gradient_2, movie_gradient_3, movie_gradient_4, movie_line, movie_screen, msA1, msA2, msA3, msA4, myFlow, no_btn_1, p6_side, palm_down, pitch, press_at_start, purple, purpleAnimation, relax, relax_text, relax_text_2, relief, relief_text, relief_text_2, rescue, rescue_text, rescue_text_2, s1, s2, s3, skin_temp, stepper, stepper2, stepper3, subheader_1, symptoms, temp_at_start, temp_num, unpitch, up_down, yes_btn_1;
 
 heart_rate_num = 147;
 
@@ -167,6 +167,28 @@ arrow = new Layer({
   x: A1.width + 24,
   width: 90,
   height: 90
+});
+
+arrow_grow = new Animation(arrow, {
+  scale: 1.1,
+  time: 0.6,
+  curve: "ease-in-out"
+});
+
+arrow_shrink = new Animation(arrow, {
+  scale: 1,
+  time: 0.6,
+  curve: "ease-in-out"
+});
+
+arrow_grow.start();
+
+arrow_grow.onAnimationEnd(function() {
+  return arrow_shrink.start();
+});
+
+arrow_shrink.onAnimationEnd(function() {
+  return arrow_grow.start();
 });
 
 A2 = new Layer({
