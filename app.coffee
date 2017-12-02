@@ -336,7 +336,6 @@ rescue_text = new Layer
   style: h3
   backgroundColor: null
   html: "Rescue from Nausea"
-rescue_text.style.fontSize = "40pt"
 
 rescue_text_2 = new Layer
   parent: rescue
@@ -535,10 +534,16 @@ create_button(got_it_btn)
 
 header3 = new Layer
   parent: container3
-  html: "Press Down on the Hand"
+  html: "Press Down With Your Hand"
 
 create_header(header3)
 
+new_biometrics = new Layer
+  parent: container3
+  y: header3.height - 64
+  width: 200
+  height: 400
+  
 #Create Hand
 hand = new Layer
   parent: container3
