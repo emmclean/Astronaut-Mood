@@ -146,7 +146,9 @@ A1_sub = new Layer
   y: A1.height + 16
   html: "A1"
   style: s1
+  backgroundColor: "null"
 A1_sub.style.lineHeight = "60px"
+A1_sub.style.color = "white"
 
 A2 = new Layer
   parent: header_1
@@ -164,7 +166,10 @@ A2_sub = new Layer
   y: A1.height + 16
   html: "A2"
   style: s1
+  backgroundColor: "null"
 A2_sub.style.lineHeight = "60px"
+A2_sub.style.color = "white"
+
 
 subheader_1 = new Layer
   html: "We detected the following biometrics which indicate you might be feeling motion sick"
