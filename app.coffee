@@ -141,11 +141,11 @@ A1 = new Layer
 A1_sub = new Layer
   parent: header_1
   width: 180
-  height: 36
+  height: 60
   x: 16
   y: A1.height + 16
   html: "A1"
-  style: s3
+  style: s1
 
 A2 = new Layer
   parent: header_1
@@ -158,11 +158,11 @@ A2 = new Layer
 A1_sub = new Layer
   parent: header_1
   width: 180
-  height: 36
+  height: 60
   x: Screen.width - 196
   y: A1.height + 16
   html: "A2"
-  style: s3
+  style: s1
 
 subheader_1 = new Layer
   html: "We detected the following biometrics which indicate you might be feeling motion sick"
