@@ -146,6 +146,7 @@ A1_sub = new Layer
   y: A1.height + 16
   html: "A1"
   style: s1
+A1_sub.style.lineHeight = "60px"
 
 A2 = new Layer
   parent: header_1
@@ -155,7 +156,7 @@ A2 = new Layer
   image: "images/chair.png"
   y: 16
 
-A1_sub = new Layer
+A2_sub = new Layer
   parent: header_1
   width: 180
   height: 60
@@ -163,6 +164,7 @@ A1_sub = new Layer
   y: A1.height + 16
   html: "A2"
   style: s1
+A2_sub.style.lineHeight = "60px"
 
 subheader_1 = new Layer
   html: "We detected the following biometrics which indicate you might be feeling motion sick"
