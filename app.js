@@ -163,10 +163,10 @@ A1_sub.style.color = "#19b7d7";
 arrow = new Layer({
   parent: header_1,
   image: "images/arrow.png",
-  y: 16,
+  y: 16 + 45,
   x: A1.width + 24,
-  width: 180,
-  height: 180
+  width: 90,
+  height: 90
 });
 
 A2 = new Layer({
