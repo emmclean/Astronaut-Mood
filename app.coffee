@@ -174,7 +174,7 @@ A2_sub.style.color = "white"
 subheader_1 = new Layer
   html: "We detected the following biometrics which indicate you might be feeling motion sick"
   parent: header_1
-  width: header_1.width * 0.8
+  width: header_1.width * 0.7
   height: 50
   y: (header_1.height / 2) + 16
   x: Align.center
