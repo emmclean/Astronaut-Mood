@@ -613,9 +613,9 @@ create_header(header3);
 
 new_biometrics = new Layer({
   parent: container3,
-  y: header3.height - 64,
-  width: 200,
-  height: 400
+  y: header3.height - 150,
+  width: 300,
+  height: 600
 });
 
 hand = new Layer({
