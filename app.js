@@ -161,7 +161,7 @@ A1_sub.style.lineHeight = "60px";
 A1_sub.style.color = "#19b7d7";
 
 arrow = new Layer({
-  parent: header,
+  parent: header_1,
   image: "images/arrow.png",
   y: 16,
   x: A1.width + 24,

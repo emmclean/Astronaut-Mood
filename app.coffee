@@ -151,13 +151,13 @@ A1_sub.style.lineHeight = "60px"
 A1_sub.style.color = "#19b7d7"
 
 arrow = new Layer
-  parent: header
+  parent: header_1
   image: "images/arrow.png"
   y: 16
   x: A1.width + 24
   width: 180
   height: 180
-  
+
 A2 = new Layer
   parent: header_1
   x: Screen.width - 196
