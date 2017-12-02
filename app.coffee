@@ -133,16 +133,16 @@ create_header(header_1)
 A1 = new Layer
   parent: header_1
   x: Align.left
-  width: 280
-  height: 280
+  width: 180
+  height: 180
   image: "images/chair2.png"
 
 
 A2 = new Layer
   parent: header_1
   x: Align.right
-  width: 280
-  height: 280
+  width: 180
+  height: 180
   image: "images/chair.png"
 
 subheader_1 = new Layer
