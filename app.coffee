@@ -154,7 +154,7 @@ arrow = new Layer
   parent: header_1
   image: "images/arrow.png"
   y: 16 + 45
-  x: A1.width + 24
+  x: A1.width + 16
   width: 90
   height: 90
 
