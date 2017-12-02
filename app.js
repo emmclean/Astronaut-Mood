@@ -148,11 +148,11 @@ A1 = new Layer({
 A1_sub = new Layer({
   parent: header_1,
   width: 180,
-  height: 30,
+  height: 36,
   x: 16,
-  y: A1.height + 8,
+  y: A1.height + 16,
   html: "A1",
-  style: s1
+  style: s3
 });
 
 A2 = new Layer({
@@ -167,11 +167,11 @@ A2 = new Layer({
 A1_sub = new Layer({
   parent: header_1,
   width: 180,
-  height: 30,
+  height: 36,
   x: Screen.width - 196,
-  y: A1.height + 8,
+  y: A1.height + 16,
   html: "A2",
-  style: s1
+  style: s3
 });
 
 subheader_1 = new Layer({
