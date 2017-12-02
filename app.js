@@ -1,4 +1,4 @@
-var A1, A11, A1_sub, A2, A2_sub, HR1, HR2, HR3, bio_markers_container, bio_s1, bio_s2, blackAnimation, blood_press, blood_press_denom, blood_press_num, blue, blueAnimation, button_container, button_container_2, container1, container2, container3, create_bottom, create_button, create_content, create_header, creater_container, down_up, got_it_btn, green, greenAnimation, h3, hand, hand_grow, hand_shrink, header2, header3, header_1, header_style, heart_at_start, heart_rate, heart_rate_num, horizon_line, horizon_line_2, instructions, movie_gradient, movie_gradient_2, movie_gradient_3, movie_gradient_4, movie_line, movie_screen, msA1, msA2, msA3, msA4, myFlow, no_btn_1, p6_side, palm_down, pitch, press_at_start, purple, purpleAnimation, relax, relax_text, relax_text_2, relief, relief_text, relief_text_2, rescue, rescue_text, rescue_text_2, s1, s2, s3, skin_temp, stepper, stepper2, stepper3, subheader_1, symptoms, temp_at_start, temp_num, unpitch, up_down, yes_btn_1;
+var A1, A1_sub, A2, A2_sub, HR1, HR2, HR3, bio_markers_container, bio_s1, bio_s2, blackAnimation, blood_press, blood_press_denom, blood_press_num, blue, blueAnimation, button_container, button_container_2, container1, container2, container3, create_bottom, create_button, create_content, create_header, creater_container, down_up, got_it_btn, green, greenAnimation, h3, hand, hand_grow, hand_shrink, header2, header3, header_1, header_style, heart_at_start, heart_rate, heart_rate_num, horizon_line, horizon_line_2, instructions, movie_gradient, movie_gradient_2, movie_gradient_3, movie_gradient_4, movie_line, movie_screen, msA1, msA2, msA3, msA4, myFlow, no_btn_1, p6_side, palm_down, pitch, press_at_start, purple, purpleAnimation, relax, relax_text, relax_text_2, relief, relief_text, relief_text_2, rescue, rescue_text, rescue_text_2, s1, s2, s3, skin_temp, stepper, stepper2, stepper3, subheader_1, symptoms, temp_at_start, temp_num, unpitch, up_down, yes_btn_1;
 
 heart_rate_num = 147;
 
@@ -136,17 +136,6 @@ header_1 = new Layer({
 
 create_header(header_1);
 
-A11 = new Layer({
-  parent: header_1,
-  width: 180,
-  height: 180,
-  backgroundColor: "white",
-  borderRadius: 180,
-  blur: 50,
-  x: 16,
-  y: 16
-});
-
 A1 = new Layer({
   parent: header_1,
   width: 180,
@@ -169,7 +158,7 @@ A1_sub = new Layer({
 
 A1_sub.style.lineHeight = "60px";
 
-A1_sub.style.color = "white";
+A1_sub.style.color = "#19b7d7";
 
 A2 = new Layer({
   parent: header_1,
@@ -351,6 +340,8 @@ rescue_text = new Layer({
   backgroundColor: null,
   html: "Rescue from Nausea"
 });
+
+rescue_text.style.fontSize = "40pt";
 
 rescue_text_2 = new Layer({
   parent: rescue,

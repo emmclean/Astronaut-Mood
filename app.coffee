@@ -130,16 +130,6 @@ header_1 = new Layer
 
 create_header(header_1)
 
-A11 = new Layer
-  parent: header_1
-  width: 180
-  height: 180
-  backgroundColor: "white"
-  borderRadius: 180
-  blur: 50
-  x: 16
-  y: 16
-
 A1 = new Layer
   parent: header_1
   width: 180
@@ -147,6 +137,7 @@ A1 = new Layer
   image: "images/chair2.png"
   x: 16
   y: 16
+
 
 A1_sub = new Layer
   parent: header_1
@@ -158,7 +149,7 @@ A1_sub = new Layer
   style: s1
   backgroundColor: "null"
 A1_sub.style.lineHeight = "60px"
-A1_sub.style.color = "white"
+A1_sub.style.color = "#19b7d7"
 
 A2 = new Layer
   parent: header_1
@@ -323,6 +314,7 @@ rescue_text = new Layer
   style: h3
   backgroundColor: null
   html: "Rescue from Nausea"
+rescue_text.style.fontSize = "40pt"
 
 rescue_text_2 = new Layer
   parent: rescue
