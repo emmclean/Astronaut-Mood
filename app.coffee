@@ -107,7 +107,7 @@ create_button = (layerName, WW) ->
   layerName.style = s1
 
   layerName.onTouchStart ->
-    layerName.backgroundColor = "teal"
+    layerName.backgroundColor = "#19b7d7"
     layerName.style.color = "white"
   layerName.onTouchEnd ->
     layerName.backgroundColor = "white"

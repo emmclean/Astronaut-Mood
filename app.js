@@ -108,7 +108,7 @@ create_button = function(layerName, WW) {
   layerName.backgroundColor = "white";
   layerName.style = s1;
   layerName.onTouchStart(function() {
-    layerName.backgroundColor = "teal";
+    layerName.backgroundColor = "#19b7d7";
     return layerName.style.color = "white";
   });
   return layerName.onTouchEnd(function() {
