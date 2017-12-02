@@ -138,7 +138,6 @@ A1 = new Layer
   x: 16
   y: 16
 
-
 A1_sub = new Layer
   parent: header_1
   width: 180
@@ -151,6 +150,14 @@ A1_sub = new Layer
 A1_sub.style.lineHeight = "60px"
 A1_sub.style.color = "#19b7d7"
 
+arrow = new Layer
+  parent: header
+  image: "images/arrow.png"
+  y: 16
+  x: A1.width + 24
+  width: 180
+  height: 180
+  
 A2 = new Layer
   parent: header_1
   x: Screen.width - 196
