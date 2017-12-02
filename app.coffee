@@ -73,7 +73,7 @@ creater_container = (layerName) ->
   layerName.y = Align.center
   layerName.width = Screen.width
   layerName.height = Screen.height
-  layerName.backgroundColor = "black"
+  layerName.backgroundColor = "#253b46"
 
 #Create header container
 create_header = (layerName) ->

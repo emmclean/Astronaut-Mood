@@ -73,7 +73,7 @@ creater_container = function(layerName) {
   layerName.y = Align.center;
   layerName.width = Screen.width;
   layerName.height = Screen.height;
-  return layerName.backgroundColor = "black";
+  return layerName.backgroundColor = "#253b46";
 };
 
 create_header = function(layerName) {
