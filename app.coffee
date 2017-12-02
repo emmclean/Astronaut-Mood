@@ -130,6 +130,21 @@ header_1 = new Layer
 
 create_header(header_1)
 
+A1 = new Layer
+  parent: header_1
+  x: Align.left
+  width: 280
+  height: 280
+  image: "images/chair2.png"
+
+
+A2 = new Layer
+  parent: header_1
+  x: Align.right
+  width: 280
+  height: 280
+  image: "images/chair.png"
+
 subheader_1 = new Layer
   html: "We detected the following biometrics which indicate you might be feeling motion sick"
   parent: header_1
