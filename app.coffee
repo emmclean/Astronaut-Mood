@@ -130,6 +130,16 @@ header_1 = new Layer
 
 create_header(header_1)
 
+A11 = new Layer
+  parent: header_1
+  width: 180
+  height: 180
+  backgroundColor: "white"
+  borderRadius: 180
+  blur: 50
+  x: 16
+  y: 16
+
 A1 = new Layer
   parent: header_1
   width: 180
