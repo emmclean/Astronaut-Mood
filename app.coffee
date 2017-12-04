@@ -544,11 +544,22 @@ new_biometrics = new Layer
   width: 400
   height: 832
 
+heart_rate2 = new Layer
+  parent: new_biometrics
+  height: new_biometrics.width
+  width: new_biometrics.width
+  borderRadius: new_biometrics.width
+  borderWidth: 4
+  borderColor: "red"
+  backgroundColor: null
+  html: "<b>Heart Rate</b></br>" + heart_rate_num + " bpm"
+  style: bio_s1
+
 blood_press2 = new Layer
   parent: new_biometrics
   height: new_biometrics.width
   width: new_biometrics.width
-  x: Align.center
+  y: new_biometrics.width + 16
   borderRadius: new_biometrics.width
   borderWidth: 4
   borderColor: "orange"

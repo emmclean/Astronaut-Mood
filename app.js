@@ -1,4 +1,4 @@
-var A1, A1_sub, A2, A2_sub, HR1, HR2, HR3, arrow, arrow_grow, arrow_shrink, bio_markers_container, bio_s1, bio_s2, blackAnimation, blood_press, blood_press2, blood_press_denom, blood_press_num, blue, blueAnimation, button_container, button_container_2, container1, container2, container3, create_bottom, create_button, create_content, create_header, creater_container, down_up, got_it_btn, green, greenAnimation, h3, hand, hand_grow, hand_shrink, header2, header3, header_1, header_style, heart_at_start, heart_rate, heart_rate_num, horizon_line, horizon_line_2, instructions, movie_gradient, movie_gradient_2, movie_gradient_3, movie_gradient_4, movie_line, movie_screen, msA1, msA2, msA3, msA4, myFlow, new_biometrics, no_btn_1, p6_side, palm_down, pitch, press_at_start, purple, purpleAnimation, relax, relax_text, relax_text_2, relief, relief_text, relief_text_2, rescue, rescue_text, rescue_text_2, s1, s2, s3, skin_temp, stepper, stepper2, stepper3, subheader_1, symptoms, temp_at_start, temp_num, unpitch, up_down, yes_btn_1;
+var A1, A1_sub, A2, A2_sub, HR1, HR2, HR3, arrow, arrow_grow, arrow_shrink, bio_markers_container, bio_s1, bio_s2, blackAnimation, blood_press, blood_press2, blood_press_denom, blood_press_num, blue, blueAnimation, button_container, button_container_2, container1, container2, container3, create_bottom, create_button, create_content, create_header, creater_container, down_up, got_it_btn, green, greenAnimation, h3, hand, hand_grow, hand_shrink, header2, header3, header_1, header_style, heart_at_start, heart_rate, heart_rate2, heart_rate_num, horizon_line, horizon_line_2, instructions, movie_gradient, movie_gradient_2, movie_gradient_3, movie_gradient_4, movie_line, movie_screen, msA1, msA2, msA3, msA4, myFlow, new_biometrics, no_btn_1, p6_side, palm_down, pitch, press_at_start, purple, purpleAnimation, relax, relax_text, relax_text_2, relief, relief_text, relief_text_2, rescue, rescue_text, rescue_text_2, s1, s2, s3, skin_temp, stepper, stepper2, stepper3, subheader_1, symptoms, temp_at_start, temp_num, unpitch, up_down, yes_btn_1;
 
 heart_rate_num = 147;
 
@@ -618,11 +618,23 @@ new_biometrics = new Layer({
   height: 832
 });
 
+heart_rate2 = new Layer({
+  parent: new_biometrics,
+  height: new_biometrics.width,
+  width: new_biometrics.width,
+  borderRadius: new_biometrics.width,
+  borderWidth: 4,
+  borderColor: "red",
+  backgroundColor: null,
+  html: "<b>Heart Rate</b></br>" + heart_rate_num + " bpm",
+  style: bio_s1
+});
+
 blood_press2 = new Layer({
   parent: new_biometrics,
   height: new_biometrics.width,
   width: new_biometrics.width,
-  x: Align.center,
+  y: new_biometrics.width + 16,
   borderRadius: new_biometrics.width,
   borderWidth: 4,
   borderColor: "orange",
