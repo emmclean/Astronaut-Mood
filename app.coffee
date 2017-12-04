@@ -544,6 +544,18 @@ new_biometrics = new Layer
   width: 400
   height: 600
 
+blood_press2 = new Layer
+  parent: new_biometrics
+  height: new_biometrics.width
+  width: new_biometrics.width
+  x: Align.center
+  borderRadius: new_biometrics.width
+  borderWidth: 4
+  borderColor: "orange"
+  backgroundColor: null
+  html: "<b>Blood Pressure</b></br>" + blood_press_num + " / " + blood_press_denom
+  style: bio_s1
+
 #Create Hand
 hand = new Layer
   parent: container3
