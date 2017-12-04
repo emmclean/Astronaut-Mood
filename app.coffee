@@ -538,52 +538,90 @@ header3 = new Layer
 
 create_header(header3)
 
-# new_biometrics = new Layer
-#   parent: container3
-#   y: header3.height - 25
-#   width: 400
-#   height: 864
-#
-# heart_rate2 = new Layer
-#   parent: new_biometrics
-#   height: new_biometrics.width
-#   width: new_biometrics.width
-#   borderRadius: new_biometrics.width
-#   borderWidth: 4
-#   borderColor: "red"
-#   backgroundColor: null
-#   html: "<b>Heart Rate</b></br>" + heart_rate_num + " bpm"
-#   style: bio_s1
-#
-# blood_press2 = new Layer
-#   parent: new_biometrics
-#   height: new_biometrics.width
-#   width: new_biometrics.width
-#   y: new_biometrics.width + 32
-#   borderRadius: new_biometrics.width
-#   borderWidth: 4
-#   borderColor: "orange"
-#   backgroundColor: null
-#   html: "<b>Blood Pressure</b></br>" + blood_press_num + " / " + blood_press_denom
-#   style: bio_s1
-#
-# new_biometrics2 = new Layer
-#   parent: container3
-#   y: header3.height - 25
-#   x: Align.right
-#   width: 400
-#   height: 400
-#
-# skin_temp = new Layer
-#   parent: new_biometrics2
-#   height: new_biometrics.width
-#   width: new_biometrics.width
-#   borderRadius: new_biometrics.width
-#   borderWidth: 4
-#   borderColor: "teal"
-#   backgroundColor: null
-#   html: "<b>Temperature</b></br>" +  temp_num + "F"
-#   style: bio_s1
+new_biometrics = new Layer
+  parent: container3
+  y: header3.height - 25
+  width: 400
+  height: 864
+
+heart_rate2 = new Layer
+  parent: new_biometrics
+  height: new_biometrics.width
+  width: new_biometrics.width
+  borderRadius: new_biometrics.width
+  borderWidth: 4
+  borderColor: "red"
+  backgroundColor: null
+  html: "<b>Heart Rate</b></br>" + heart_rate_num + " bpm"
+  style: bio_s1
+
+blood_press2 = new Layer
+  parent: new_biometrics
+  height: new_biometrics.width
+  width: new_biometrics.width
+  y: new_biometrics.width + 32
+  borderRadius: new_biometrics.width
+  borderWidth: 4
+  borderColor: "orange"
+  backgroundColor: null
+  html: "<b>Blood Pressure</b></br>" + blood_press_num + " / " + blood_press_denom
+  style: bio_s1
+
+new_biometrics2 = new Layer
+  parent: container3
+  y: header3.height - 25
+  x: Align.right
+  width: 400
+  height: 400
+
+skin_temp2 = new Layer
+  parent: new_biometrics2
+  height: new_biometrics.width
+  width: new_biometrics.width
+  borderRadius: new_biometrics.width
+  borderWidth: 4
+  borderColor: "teal"
+  backgroundColor: null
+  html: "<b>Temperature</b></br>" +  temp_num + "F"
+  style: bio_s1
+
+stepper11 = 3
+HR11 = ()->
+  new_HR = Utils.randomNumber(80, 110)
+  heartnum = Utils.round(new_HR, 0)
+  heart_rate2.html = "<b>Heart Rate</b></br>" + heartnum + " bpm"
+Utils.delay 3, ->
+  HR11()
+  for i in [0...200]
+    Utils.delay stepper11, ->
+      HR11()
+    stepper11 = stepper11 + 3
+
+stepper22 = 9
+HR22 = ()->
+  new_BP_num = Utils.randomNumber(120, 170)
+  new_BP_den = Utils.randomNumber(70, 110)
+  BPnum = Utils.round(new_BP_num, 0)
+  BPdenom = Utils.round(new_BP_den, 0)
+  blood_press2.html = "<b>Blood Pressure</b></br>" + BPnum + " / " + BPdenom
+Utils.delay 9, ->
+  HR22()
+  for i in [0...300]
+    Utils.delay stepper22, ->
+      HR22()
+    stepper22 = stepper22 + 9
+
+stepper33 = 60
+HR3 = ()->
+  new_temp = Utils.randomNumber(97, 98)
+  tempnum = Utils.round(new_temp, 1)
+  skin_temp2.html = "<b>Temperature</b></br>" + tempnum + "F"
+Utils.delay 30, ->
+  HR3()
+  for i in [0...40]
+    Utils.delay stepper33, ->
+      HR3()
+    stepper33 = stepper33 + 60
 
 #Create Hand
 hand = new Layer
