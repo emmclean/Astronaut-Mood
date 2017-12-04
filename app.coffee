@@ -538,34 +538,52 @@ header3 = new Layer
 
 create_header(header3)
 
-new_biometrics = new Layer
-  parent: container3
-  y: header3.height - 75
-  width: 400
-  height: 832
-
-heart_rate2 = new Layer
-  parent: new_biometrics
-  height: new_biometrics.width
-  width: new_biometrics.width
-  borderRadius: new_biometrics.width
-  borderWidth: 4
-  borderColor: "red"
-  backgroundColor: null
-  html: "<b>Heart Rate</b></br>" + heart_rate_num + " bpm"
-  style: bio_s1
-
-blood_press2 = new Layer
-  parent: new_biometrics
-  height: new_biometrics.width
-  width: new_biometrics.width
-  y: new_biometrics.width + 16
-  borderRadius: new_biometrics.width
-  borderWidth: 4
-  borderColor: "orange"
-  backgroundColor: null
-  html: "<b>Blood Pressure</b></br>" + blood_press_num + " / " + blood_press_denom
-  style: bio_s1
+# new_biometrics = new Layer
+#   parent: container3
+#   y: header3.height - 25
+#   width: 400
+#   height: 864
+#
+# heart_rate2 = new Layer
+#   parent: new_biometrics
+#   height: new_biometrics.width
+#   width: new_biometrics.width
+#   borderRadius: new_biometrics.width
+#   borderWidth: 4
+#   borderColor: "red"
+#   backgroundColor: null
+#   html: "<b>Heart Rate</b></br>" + heart_rate_num + " bpm"
+#   style: bio_s1
+#
+# blood_press2 = new Layer
+#   parent: new_biometrics
+#   height: new_biometrics.width
+#   width: new_biometrics.width
+#   y: new_biometrics.width + 32
+#   borderRadius: new_biometrics.width
+#   borderWidth: 4
+#   borderColor: "orange"
+#   backgroundColor: null
+#   html: "<b>Blood Pressure</b></br>" + blood_press_num + " / " + blood_press_denom
+#   style: bio_s1
+#
+# new_biometrics2 = new Layer
+#   parent: container3
+#   y: header3.height - 25
+#   x: Align.right
+#   width: 400
+#   height: 400
+#
+# skin_temp = new Layer
+#   parent: new_biometrics2
+#   height: new_biometrics.width
+#   width: new_biometrics.width
+#   borderRadius: new_biometrics.width
+#   borderWidth: 4
+#   borderColor: "teal"
+#   backgroundColor: null
+#   html: "<b>Temperature</b></br>" +  temp_num + "F"
+#   style: bio_s1
 
 #Create Hand
 hand = new Layer
