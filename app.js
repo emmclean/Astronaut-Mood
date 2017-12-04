@@ -1,4 +1,4 @@
-var A1, A1_sub, A2, A2_sub, HR1, HR11, HR2, HR22, HR3, arrow, arrow_grow, arrow_shrink, bio_markers_container, bio_s1, bio_s2, blackAnimation, blood_press, blood_press2, blood_press_denom, blood_press_num, blue, blueAnimation, button_container, button_container_2, container1, container2, container3, create_bottom, create_button, create_content, create_header, creater_container, down_up, got_it_btn, green, greenAnimation, h3, hand, hand_grow, hand_shrink, header2, header3, header_1, header_style, heart_at_start, heart_rate, heart_rate2, heart_rate_num, horizon_line, horizon_line_2, instructions, movie_gradient, movie_gradient_2, movie_gradient_3, movie_gradient_4, movie_line, movie_screen, msA1, msA2, msA3, msA4, myFlow, new_biometrics, new_biometrics2, no_btn_1, p6_side, palm_down, pitch, press_at_start, purple, purpleAnimation, relax, relax_text, relax_text_2, relief, relief_text, relief_text_2, rescue, rescue_text, rescue_text_2, s1, s2, s3, skin_temp, skin_temp2, stepper, stepper11, stepper2, stepper22, stepper3, stepper33, subheader_1, symptoms, temp_at_start, temp_num, unpitch, up_down, yes_btn_1;
+var A1, A1_sub, A2, A2_sub, HR1, HR2, HR3, arrow, arrow_grow, arrow_shrink, bio_markers_container, bio_s1, bio_s2, blackAnimation, blood_press, blood_press2, blood_press_denom, blood_press_num, blue, blueAnimation, button_container, button_container_2, container1, container2, container3, create_bottom, create_button, create_content, create_header, creater_container, down_up, got_it_btn, green, greenAnimation, h3, hand, hand_grow, hand_shrink, header2, header3, header_1, header_style, heart_at_start, heart_rate, heart_rate2, heart_rate_num, horizon_line, horizon_line_2, instructions, movie_gradient, movie_gradient_2, movie_gradient_3, movie_gradient_4, movie_line, movie_screen, msA1, msA2, msA3, msA4, myFlow, new_biometrics, new_biometrics2, no_btn_1, p6_side, palm_down, pitch, press_at_start, purple, purpleAnimation, relax, relax_text, relax_text_2, relief, relief_text, relief_text_2, rescue, rescue_text, rescue_text_2, s1, s2, s3, skin_temp, skin_temp2, stepper, stepper2, stepper3, subheader_1, symptoms, temp_at_start, temp_num, unpitch, up_down, yes_btn_1;
 
 heart_rate_num = 147;
 
@@ -665,74 +665,6 @@ skin_temp2 = new Layer({
   style: bio_s1
 });
 
-stepper11 = 3;
-
-HR11 = function() {
-  var heartnum, new_HR;
-  new_HR = Utils.randomNumber(80, 110);
-  heartnum = Utils.round(new_HR, 0);
-  return heart_rate2.html = "<b>Heart Rate</b></br>" + heartnum + " bpm";
-};
-
-Utils.delay(3, function() {
-  var i, j, results;
-  HR11();
-  results = [];
-  for (i = j = 0; j < 200; i = ++j) {
-    Utils.delay(stepper11, function() {
-      return HR11();
-    });
-    results.push(stepper11 = stepper11 + 3);
-  }
-  return results;
-});
-
-stepper22 = 9;
-
-HR22 = function() {
-  var BPdenom, BPnum, new_BP_den, new_BP_num;
-  new_BP_num = Utils.randomNumber(80, 100);
-  new_BP_den = Utils.randomNumber(60, 80);
-  BPnum = Utils.round(new_BP_num, 0);
-  BPdenom = Utils.round(new_BP_den, 0);
-  return blood_press2.html = "<b>Blood Pressure</b></br>" + BPnum + " / " + BPdenom;
-};
-
-Utils.delay(9, function() {
-  var i, j, results;
-  HR22();
-  results = [];
-  for (i = j = 0; j < 300; i = ++j) {
-    Utils.delay(stepper22, function() {
-      return HR22();
-    });
-    results.push(stepper22 = stepper22 + 9);
-  }
-  return results;
-});
-
-stepper33 = 60;
-
-HR3 = function() {
-  var new_temp, tempnum;
-  new_temp = Utils.randomNumber(98, 99);
-  tempnum = Utils.round(new_temp, 1);
-  return skin_temp2.html = "<b>Temperature</b></br>" + tempnum + "F";
-};
-
-Utils.delay(30, function() {
-  var i, j, results;
-  HR3();
-  results = [];
-  for (i = j = 0; j < 40; i = ++j) {
-    Utils.delay(stepper33, function() {
-      return HR3();
-    });
-    results.push(stepper33 = stepper33 + 60);
-  }
-  return results;
-});
-
 hand = new Layer({
   parent: container3,
   width: container3.width * (2 / 3),
@@ -877,6 +809,7 @@ blackAnimation = new Animation(container3, {
 });
 
 hand.onLongPressStart(function() {
+  var HR11, HR22, stepper11, stepper22, stepper33;
   blueAnimation.start();
   blueAnimation.onAnimationEnd(function() {
     return purpleAnimation.start();
@@ -884,8 +817,67 @@ hand.onLongPressStart(function() {
   purpleAnimation.onAnimationEnd(function() {
     return greenAnimation.start();
   });
-  return greenAnimation.onAnimationEnd(function() {
+  greenAnimation.onAnimationEnd(function() {
     return blueAnimation.start();
+  });
+  stepper11 = 3;
+  HR11 = function() {
+    var heartnum, new_HR;
+    new_HR = Utils.randomNumber(80, 110);
+    heartnum = Utils.round(new_HR, 0);
+    return heart_rate2.html = "<b>Heart Rate</b></br>" + heartnum + " bpm";
+  };
+  Utils.delay(3, function() {
+    var i, j, results;
+    HR11();
+    results = [];
+    for (i = j = 0; j < 200; i = ++j) {
+      Utils.delay(stepper11, function() {
+        return HR11();
+      });
+      results.push(stepper11 = stepper11 + 3);
+    }
+    return results;
+  });
+  stepper22 = 9;
+  HR22 = function() {
+    var BPdenom, BPnum, new_BP_den, new_BP_num;
+    new_BP_num = Utils.randomNumber(80, 100);
+    new_BP_den = Utils.randomNumber(60, 80);
+    BPnum = Utils.round(new_BP_num, 0);
+    BPdenom = Utils.round(new_BP_den, 0);
+    return blood_press2.html = "<b>Blood Pressure</b></br>" + BPnum + " / " + BPdenom;
+  };
+  Utils.delay(9, function() {
+    var i, j, results;
+    HR22();
+    results = [];
+    for (i = j = 0; j < 300; i = ++j) {
+      Utils.delay(stepper22, function() {
+        return HR22();
+      });
+      results.push(stepper22 = stepper22 + 9);
+    }
+    return results;
+  });
+  stepper33 = 60;
+  HR3 = function() {
+    var new_temp, tempnum;
+    new_temp = Utils.randomNumber(98, 99);
+    tempnum = Utils.round(new_temp, 1);
+    return skin_temp2.html = "<b>Temperature</b></br>" + tempnum + "F";
+  };
+  return Utils.delay(30, function() {
+    var i, j, results;
+    HR3();
+    results = [];
+    for (i = j = 0; j < 40; i = ++j) {
+      Utils.delay(stepper33, function() {
+        return HR3();
+      });
+      results.push(stepper33 = stepper33 + 60);
+    }
+    return results;
   });
 });
 

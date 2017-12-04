@@ -587,43 +587,6 @@ skin_temp2 = new Layer
   html: "<b>Temperature</b></br>" +  temp_num + "F"
   style: bio_s1
 
-stepper11 = 3
-HR11 = ()->
-  new_HR = Utils.randomNumber(80, 110)
-  heartnum = Utils.round(new_HR, 0)
-  heart_rate2.html = "<b>Heart Rate</b></br>" + heartnum + " bpm"
-Utils.delay 3, ->
-  HR11()
-  for i in [0...200]
-    Utils.delay stepper11, ->
-      HR11()
-    stepper11 = stepper11 + 3
-
-stepper22 = 9
-HR22 = ()->
-  new_BP_num = Utils.randomNumber(80, 100)
-  new_BP_den = Utils.randomNumber(60, 80)
-  BPnum = Utils.round(new_BP_num, 0)
-  BPdenom = Utils.round(new_BP_den, 0)
-  blood_press2.html = "<b>Blood Pressure</b></br>" + BPnum + " / " + BPdenom
-Utils.delay 9, ->
-  HR22()
-  for i in [0...300]
-    Utils.delay stepper22, ->
-      HR22()
-    stepper22 = stepper22 + 9
-
-stepper33 = 60
-HR3 = ()->
-  new_temp = Utils.randomNumber(98, 99)
-  tempnum = Utils.round(new_temp, 1)
-  skin_temp2.html = "<b>Temperature</b></br>" + tempnum + "F"
-Utils.delay 30, ->
-  HR3()
-  for i in [0...40]
-    Utils.delay stepper33, ->
-      HR3()
-    stepper33 = stepper33 + 60
 
 #Create Hand
 hand = new Layer
@@ -741,6 +704,43 @@ hand.onLongPressStart ->
     greenAnimation.start()
   greenAnimation.onAnimationEnd ->
     blueAnimation.start()
+  stepper11 = 3
+  HR11 = ()->
+    new_HR = Utils.randomNumber(80, 110)
+    heartnum = Utils.round(new_HR, 0)
+    heart_rate2.html = "<b>Heart Rate</b></br>" + heartnum + " bpm"
+  Utils.delay 3, ->
+    HR11()
+    for i in [0...200]
+      Utils.delay stepper11, ->
+        HR11()
+      stepper11 = stepper11 + 3
+
+  stepper22 = 9
+  HR22 = ()->
+    new_BP_num = Utils.randomNumber(80, 100)
+    new_BP_den = Utils.randomNumber(60, 80)
+    BPnum = Utils.round(new_BP_num, 0)
+    BPdenom = Utils.round(new_BP_den, 0)
+    blood_press2.html = "<b>Blood Pressure</b></br>" + BPnum + " / " + BPdenom
+  Utils.delay 9, ->
+    HR22()
+    for i in [0...300]
+      Utils.delay stepper22, ->
+        HR22()
+      stepper22 = stepper22 + 9
+
+  stepper33 = 60
+  HR3 = ()->
+    new_temp = Utils.randomNumber(98, 99)
+    tempnum = Utils.round(new_temp, 1)
+    skin_temp2.html = "<b>Temperature</b></br>" + tempnum + "F"
+  Utils.delay 30, ->
+    HR3()
+    for i in [0...40]
+      Utils.delay stepper33, ->
+        HR3()
+      stepper33 = stepper33 + 60
 hand.onLongPressEnd ->
   blueAnimation.stop()
   purpleAnimation.stop()
