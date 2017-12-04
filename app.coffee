@@ -599,7 +599,7 @@ Utils.delay 3, ->
       HR11()
     stepper11 = stepper11 + 3
 
-stepper22 = 9
+stepper22 = 3
 HR22 = ()->
   new_BP_num = Utils.randomNumber(80, 100)
   new_BP_den = Utils.randomNumber(60, 80)
@@ -613,7 +613,7 @@ Utils.delay 9, ->
       HR22()
     stepper22 = stepper22 + 9
 
-stepper33 = 60
+stepper33 = 9
 HR3 = ()->
   new_temp = Utils.randomNumber(98, 99)
   tempnum = Utils.round(new_temp, 1)

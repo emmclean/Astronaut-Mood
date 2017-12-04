@@ -687,7 +687,7 @@ Utils.delay(3, function() {
   return results;
 });
 
-stepper22 = 9;
+stepper22 = 3;
 
 HR22 = function() {
   var BPdenom, BPnum, new_BP_den, new_BP_num;
@@ -711,7 +711,7 @@ Utils.delay(9, function() {
   return results;
 });
 
-stepper33 = 60;
+stepper33 = 9;
 
 HR3 = function() {
   var new_temp, tempnum;
