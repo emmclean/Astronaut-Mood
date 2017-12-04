@@ -613,9 +613,9 @@ create_header(header3);
 
 new_biometrics = new Layer({
   parent: container3,
-  y: header3.height - 150,
+  y: header3.height - 75,
   width: 400,
-  height: 600
+  height: 832
 });
 
 blood_press2 = new Layer({
