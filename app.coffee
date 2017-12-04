@@ -543,6 +543,7 @@ new_biometrics = new Layer
   y: header3.height - 25
   width: 400
   height: 864
+  backgroundColor: null
 
 heart_rate2 = new Layer
   parent: new_biometrics
@@ -573,6 +574,7 @@ new_biometrics2 = new Layer
   x: Align.right
   width: 400
   height: 400
+  backgroundColor: null
 
 skin_temp2 = new Layer
   parent: new_biometrics2
@@ -599,8 +601,8 @@ Utils.delay 3, ->
 
 stepper22 = 9
 HR22 = ()->
-  new_BP_num = Utils.randomNumber(120, 170)
-  new_BP_den = Utils.randomNumber(70, 110)
+  new_BP_num = Utils.randomNumber(80, 100)
+  new_BP_den = Utils.randomNumber(60, 80)
   BPnum = Utils.round(new_BP_num, 0)
   BPdenom = Utils.round(new_BP_den, 0)
   blood_press2.html = "<b>Blood Pressure</b></br>" + BPnum + " / " + BPdenom
@@ -613,7 +615,7 @@ Utils.delay 9, ->
 
 stepper33 = 60
 HR3 = ()->
-  new_temp = Utils.randomNumber(97, 98)
+  new_temp = Utils.randomNumber(98, 99)
   tempnum = Utils.round(new_temp, 1)
   skin_temp2.html = "<b>Temperature</b></br>" + tempnum + "F"
 Utils.delay 30, ->

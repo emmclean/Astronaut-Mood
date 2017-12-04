@@ -615,7 +615,8 @@ new_biometrics = new Layer({
   parent: container3,
   y: header3.height - 25,
   width: 400,
-  height: 864
+  height: 864,
+  backgroundColor: null
 });
 
 heart_rate2 = new Layer({
@@ -648,7 +649,8 @@ new_biometrics2 = new Layer({
   y: header3.height - 25,
   x: Align.right,
   width: 400,
-  height: 400
+  height: 400,
+  backgroundColor: null
 });
 
 skin_temp2 = new Layer({
@@ -689,8 +691,8 @@ stepper22 = 9;
 
 HR22 = function() {
   var BPdenom, BPnum, new_BP_den, new_BP_num;
-  new_BP_num = Utils.randomNumber(120, 170);
-  new_BP_den = Utils.randomNumber(70, 110);
+  new_BP_num = Utils.randomNumber(80, 100);
+  new_BP_den = Utils.randomNumber(60, 80);
   BPnum = Utils.round(new_BP_num, 0);
   BPdenom = Utils.round(new_BP_den, 0);
   return blood_press2.html = "<b>Blood Pressure</b></br>" + BPnum + " / " + BPdenom;
@@ -713,7 +715,7 @@ stepper33 = 60;
 
 HR3 = function() {
   var new_temp, tempnum;
-  new_temp = Utils.randomNumber(97, 98);
+  new_temp = Utils.randomNumber(98, 99);
   tempnum = Utils.round(new_temp, 1);
   return skin_temp2.html = "<b>Temperature</b></br>" + tempnum + "F";
 };
